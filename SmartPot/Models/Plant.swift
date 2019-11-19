@@ -9,20 +9,20 @@
 import Foundation
 
 public enum PlantStatus: Int, Codable {
-    case red = 0
-    case yellow = 1
-    case green = 2
+    case red = 1
+    case yellow = 2
+    case green = 3
 }
 
 public struct Plant: Codable {
     public var name: String?
     public let id: Int
-    public let dateAdded: String?
+    public let dateAdded: Int?
     public var temperatureTreshold: Float?
     public var humidityTreshold: Float?
     public let owner: User?
     public let ownerId: Int
-    public var status: PlantStatus?
+    public var status: Int?
     public var active: Bool?
 
     private enum CodingKeys: String, CodingKey {

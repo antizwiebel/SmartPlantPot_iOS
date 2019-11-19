@@ -9,29 +9,32 @@
       "dateAdded": 1573731349,
       "temperatureTreshold": 50,
       "humidityTreshold": 95,
-      "ownerId": 1234
+      "ownerId": 1234,
+      "status": 1
     },
     {
       "temperature": 24.5,
       "active": true,
       "humidity": 75,
       "id": 124,
-      "name": "PlantyMCPlantface2",
+      "name": "Plant The Band",
       "dateAdded": 1573731349,
       "temperatureTreshold": 50,
       "humidityTreshold": 95,
-      "ownerId": 1234
+      "ownerId": 1234,
+      "status": 2
     },
     {
       "temperature": 24.5,
       "active": true,
       "humidity": 75,
       "id": 125,
-      "name": "PlantyMCPlantface3",
+      "name": "Planty of fish out there",
       "dateAdded": 1573731349,
       "temperatureTreshold": 50,
       "humidityTreshold": 95,
-      "ownerId": 1234
+      "ownerId": 1234,
+      "status": 3
     }
   ]
 }
