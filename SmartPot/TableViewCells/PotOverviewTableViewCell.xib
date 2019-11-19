@@ -17,7 +17,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="twW-QA-K0O">
-                        <rect key="frame" x="16" y="8" width="360" height="388"/>
+                        <rect key="frame" x="16" y="8" width="360" height="380"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="plants" translatesAutoresizingMaskIntoConstraints="NO" id="ORR-Za-zYw">
                                 <rect key="frame" x="16" y="66.5" width="328" height="184.5"/>
@@ -32,43 +32,43 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="mm1-4t-M40">
-                                <rect key="frame" x="16" y="267" width="328" height="61"/>
+                                <rect key="frame" x="16" y="267" width="328" height="53"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="first" translatesAutoresizingMaskIntoConstraints="NO" id="Huy-mL-k5L">
-                                        <rect key="frame" x="0.0" y="14.5" width="32" height="32"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="thermometer" translatesAutoresizingMaskIntoConstraints="NO" id="Huy-mL-k5L">
+                                        <rect key="frame" x="0.0" y="14.5" width="24" height="24"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="32" id="Bbn-iy-Pun"/>
-                                            <constraint firstAttribute="height" constant="32" id="gvZ-3o-57T"/>
+                                            <constraint firstAttribute="width" constant="24" id="Bbn-iy-Pun"/>
+                                            <constraint firstAttribute="height" constant="24" id="gvZ-3o-57T"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="24 °C" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rdd-f4-KG4">
-                                        <rect key="frame" x="52" y="20.5" width="44" height="20.5"/>
+                                        <rect key="frame" x="49" y="16.5" width="44" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="second" translatesAutoresizingMaskIntoConstraints="NO" id="gSz-OA-Yqj">
-                                        <rect key="frame" x="116.5" y="14.5" width="32" height="32"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="humidity" highlightedImage="humidity" translatesAutoresizingMaskIntoConstraints="NO" id="gSz-OA-Yqj">
+                                        <rect key="frame" x="118" y="10.5" width="24" height="32"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="32" id="hv8-an-ubk"/>
+                                            <constraint firstAttribute="width" constant="24" id="hv8-an-ubk"/>
                                             <constraint firstAttribute="height" constant="32" id="oyW-pZ-fhM"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="75%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I6k-18-8B5">
-                                        <rect key="frame" x="168.5" y="20.5" width="33.5" height="20.5"/>
+                                        <rect key="frame" x="167" y="16.5" width="33.5" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="first" translatesAutoresizingMaskIntoConstraints="NO" id="iqv-Js-Kp9">
-                                        <rect key="frame" x="222.5" y="14.5" width="32" height="32"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="drop" translatesAutoresizingMaskIntoConstraints="NO" id="iqv-Js-Kp9">
+                                        <rect key="frame" x="225.5" y="14.5" width="24" height="24"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="32" id="FJP-nG-zen"/>
-                                            <constraint firstAttribute="height" constant="32" id="yY1-Sb-lY0"/>
+                                            <constraint firstAttribute="width" constant="24" id="FJP-nG-zen"/>
+                                            <constraint firstAttribute="height" constant="24" id="yY1-Sb-lY0"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="500 ml" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dHj-Ho-b8z">
-                                        <rect key="frame" x="274.5" y="20.5" width="53.5" height="20.5"/>
+                                        <rect key="frame" x="274.5" y="16.5" width="53.5" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -76,7 +76,7 @@
                                 </subviews>
                             </stackView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qD2-xW-KmI">
-                                <rect key="frame" x="16" y="344" width="328" height="20"/>
+                                <rect key="frame" x="16" y="336" width="328" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="S7s-kU-W7m"/>
                                 </constraints>
@@ -103,7 +103,7 @@
                     <constraint firstAttribute="trailing" secondItem="twW-QA-K0O" secondAttribute="trailing" constant="16" id="KC0-bK-7ic"/>
                     <constraint firstItem="twW-QA-K0O" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="M86-Gc-Ah4"/>
                     <constraint firstItem="twW-QA-K0O" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="cuf-rJ-30b"/>
-                    <constraint firstAttribute="bottom" secondItem="twW-QA-K0O" secondAttribute="bottom" constant="8" id="p5e-sK-keg"/>
+                    <constraint firstAttribute="bottom" secondItem="twW-QA-K0O" secondAttribute="bottom" constant="16" id="p5e-sK-keg"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
@@ -121,8 +121,9 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="first" width="30" height="30"/>
+        <image name="drop" width="512" height="512"/>
+        <image name="humidity" width="512" height="512"/>
         <image name="plants" width="512" height="512"/>
-        <image name="second" width="30" height="30"/>
+        <image name="thermometer" width="384" height="384"/>
     </resources>
 </document>

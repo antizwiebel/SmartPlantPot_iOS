@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4D10355C237D76C4004AD267 /* HomePageResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D10355B237D76C4004AD267 /* HomePageResponse.swift */; };
 		4D10355E237D771D004AD267 /* homepage_example_response.json in Resources */ = {isa = PBXBuildFile; fileRef = 4D10355D237D771D004AD267 /* homepage_example_response.json */; };
+		4D90ED15238435AD008CAD78 /* UIColor+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D90ED14238435AD008CAD78 /* UIColor+Additions.swift */; };
 		4DF23374237C5FA900DE49D7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF23373237C5FA900DE49D7 /* AppDelegate.swift */; };
 		4DF23376237C5FA900DE49D7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF23375237C5FA900DE49D7 /* SceneDelegate.swift */; };
 		4DF23378237C5FA900DE49D7 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF23377237C5FA900DE49D7 /* HomeViewController.swift */; };
@@ -27,6 +28,7 @@
 /* Begin PBXFileReference section */
 		4D10355B237D76C4004AD267 /* HomePageResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageResponse.swift; sourceTree = "<group>"; };
 		4D10355D237D771D004AD267 /* homepage_example_response.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = homepage_example_response.json; sourceTree = "<group>"; };
+		4D90ED14238435AD008CAD78 /* UIColor+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Additions.swift"; sourceTree = "<group>"; };
 		4DF23370237C5FA900DE49D7 /* SmartPot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartPot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DF23373237C5FA900DE49D7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4DF23375237C5FA900DE49D7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 		4DF23372237C5FA900DE49D7 /* SmartPot */ = {
 			isa = PBXGroup;
 			children = (
+				4D90ED14238435AD008CAD78 /* UIColor+Additions.swift */,
 				4D10355A237D76B4004AD267 /* Testing */,
 				4DF2338E237C673100DE49D7 /* Models */,
 				4DF23389237C5FFF00DE49D7 /* TableViewCells */,
@@ -196,6 +199,7 @@
 				4D10355C237D76C4004AD267 /* HomePageResponse.swift in Sources */,
 				4DF23394237C6B4B00DE49D7 /* Temperature.swift in Sources */,
 				4DF23378237C5FA900DE49D7 /* HomeViewController.swift in Sources */,
+				4D90ED15238435AD008CAD78 /* UIColor+Additions.swift in Sources */,
 				4DF2338C237C602500DE49D7 /* PotOverviewTableViewCell.swift in Sources */,
 				4DF23374237C5FA900DE49D7 /* AppDelegate.swift in Sources */,
 				4DF23396237C6C2D00DE49D7 /* Humidity.swift in Sources */,

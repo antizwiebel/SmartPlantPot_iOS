@@ -59,7 +59,7 @@ class PotOverviewTableViewCell: UITableViewCell {
         plantStatusImageView?.layer.cornerRadius = 10
 
         if let containerView = containerView {
-            containerView.layer.shadowColor = UIColor.systemGroupedBackground.cgColor
+            containerView.layer.shadowColor = UIColor.midgrey.cgColor
             containerView.layer.shadowOpacity = 1
             containerView.layer.shadowOffset = .zero
             containerView.layer.shadowRadius = 7
