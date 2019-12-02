@@ -3,12 +3,17 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		4D10355C237D76C4004AD267 /* HomePageResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D10355B237D76C4004AD267 /* HomePageResponse.swift */; };
 		4D10355E237D771D004AD267 /* homepage_example_response.json in Resources */ = {isa = PBXBuildFile; fileRef = 4D10355D237D771D004AD267 /* homepage_example_response.json */; };
+		4D8BF62A23912162008D9EE8 /* ChartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8BF62823912162008D9EE8 /* ChartTableViewCell.swift */; };
+		4D8BF62B23912162008D9EE8 /* ChartTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D8BF62923912162008D9EE8 /* ChartTableViewCell.xib */; };
+		4D8BF62D239133E3008D9EE8 /* history_example_response.json in Resources */ = {isa = PBXBuildFile; fileRef = 4D8BF62C239133E3008D9EE8 /* history_example_response.json */; };
+		4D8BF62F2391344D008D9EE8 /* HistoryResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8BF62E2391344D008D9EE8 /* HistoryResponse.swift */; };
+		4D8BF631239138C9008D9EE8 /* ChartTimeFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8BF630239138C9008D9EE8 /* ChartTimeFormatter.swift */; };
 		4D90ED15238435AD008CAD78 /* UIColor+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D90ED14238435AD008CAD78 /* UIColor+Additions.swift */; };
 		4DF23374237C5FA900DE49D7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF23373237C5FA900DE49D7 /* AppDelegate.swift */; };
 		4DF23376237C5FA900DE49D7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF23375237C5FA900DE49D7 /* SceneDelegate.swift */; };
@@ -23,11 +28,20 @@
 		4DF23392237C6B1E00DE49D7 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF23391237C6B1E00DE49D7 /* User.swift */; };
 		4DF23394237C6B4B00DE49D7 /* Temperature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF23393237C6B4B00DE49D7 /* Temperature.swift */; };
 		4DF23396237C6C2D00DE49D7 /* Humidity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF23395237C6C2D00DE49D7 /* Humidity.swift */; };
+		C678D076E007363931C87F7C /* Pods_SmartPot.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11712CD1208434909502197F /* Pods_SmartPot.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0360B7C5A609A6C0FAA46CC7 /* Pods-SmartPot.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartPot.debug.xcconfig"; path = "Target Support Files/Pods-SmartPot/Pods-SmartPot.debug.xcconfig"; sourceTree = "<group>"; };
+		11712CD1208434909502197F /* Pods_SmartPot.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmartPot.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4012328A8F1582D4678CDD4B /* Pods-SmartPot.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartPot.release.xcconfig"; path = "Target Support Files/Pods-SmartPot/Pods-SmartPot.release.xcconfig"; sourceTree = "<group>"; };
 		4D10355B237D76C4004AD267 /* HomePageResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageResponse.swift; sourceTree = "<group>"; };
 		4D10355D237D771D004AD267 /* homepage_example_response.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = homepage_example_response.json; sourceTree = "<group>"; };
+		4D8BF62823912162008D9EE8 /* ChartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartTableViewCell.swift; sourceTree = "<group>"; };
+		4D8BF62923912162008D9EE8 /* ChartTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChartTableViewCell.xib; sourceTree = "<group>"; };
+		4D8BF62C239133E3008D9EE8 /* history_example_response.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = history_example_response.json; sourceTree = "<group>"; };
+		4D8BF62E2391344D008D9EE8 /* HistoryResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryResponse.swift; sourceTree = "<group>"; };
+		4D8BF630239138C9008D9EE8 /* ChartTimeFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartTimeFormatter.swift; sourceTree = "<group>"; };
 		4D90ED14238435AD008CAD78 /* UIColor+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Additions.swift"; sourceTree = "<group>"; };
 		4DF23370237C5FA900DE49D7 /* SmartPot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartPot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DF23373237C5FA900DE49D7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -51,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C678D076E007363931C87F7C /* Pods_SmartPot.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,7 +75,9 @@
 		4D10355A237D76B4004AD267 /* Testing */ = {
 			isa = PBXGroup;
 			children = (
+				4D8BF62C239133E3008D9EE8 /* history_example_response.json */,
 				4D10355D237D771D004AD267 /* homepage_example_response.json */,
+				4D8BF630239138C9008D9EE8 /* ChartTimeFormatter.swift */,
 			);
 			path = Testing;
 			sourceTree = "<group>";
@@ -70,6 +87,8 @@
 			children = (
 				4DF23372237C5FA900DE49D7 /* SmartPot */,
 				4DF23371237C5FA900DE49D7 /* Products */,
+				F0162A3EAB95C27073437181 /* Pods */,
+				D55F086ADE560F4F56B9984A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,6 +124,8 @@
 			children = (
 				4DF2338A237C602500DE49D7 /* PotOverviewTableViewCell.swift */,
 				4DF2338B237C602500DE49D7 /* PotOverviewTableViewCell.xib */,
+				4D8BF62823912162008D9EE8 /* ChartTableViewCell.swift */,
+				4D8BF62923912162008D9EE8 /* ChartTableViewCell.xib */,
 			);
 			path = TableViewCells;
 			sourceTree = "<group>";
@@ -117,8 +138,26 @@
 				4DF23393237C6B4B00DE49D7 /* Temperature.swift */,
 				4DF23395237C6C2D00DE49D7 /* Humidity.swift */,
 				4D10355B237D76C4004AD267 /* HomePageResponse.swift */,
+				4D8BF62E2391344D008D9EE8 /* HistoryResponse.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		D55F086ADE560F4F56B9984A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				11712CD1208434909502197F /* Pods_SmartPot.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F0162A3EAB95C27073437181 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0360B7C5A609A6C0FAA46CC7 /* Pods-SmartPot.debug.xcconfig */,
+				4012328A8F1582D4678CDD4B /* Pods-SmartPot.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -128,9 +167,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4DF23386237C5FAB00DE49D7 /* Build configuration list for PBXNativeTarget "SmartPot" */;
 			buildPhases = (
+				72FFD010A61CE96BFA930A7C /* [CP] Check Pods Manifest.lock */,
 				4DF2336C237C5FA900DE49D7 /* Sources */,
 				4DF2336D237C5FA900DE49D7 /* Frameworks */,
 				4DF2336E237C5FA900DE49D7 /* Resources */,
+				DF24889B8642A8215C976E0A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -181,7 +222,9 @@
 			files = (
 				4DF23382237C5FAB00DE49D7 /* LaunchScreen.storyboard in Resources */,
 				4DF2337F237C5FAB00DE49D7 /* Assets.xcassets in Resources */,
+				4D8BF62B23912162008D9EE8 /* ChartTableViewCell.xib in Resources */,
 				4D10355E237D771D004AD267 /* homepage_example_response.json in Resources */,
+				4D8BF62D239133E3008D9EE8 /* history_example_response.json in Resources */,
 				4DF2338D237C602500DE49D7 /* PotOverviewTableViewCell.xib in Resources */,
 				4DF2337D237C5FA900DE49D7 /* Main.storyboard in Resources */,
 			);
@@ -189,14 +232,58 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		72FFD010A61CE96BFA930A7C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SmartPot-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DF24889B8642A8215C976E0A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SmartPot/Pods-SmartPot-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SmartPot/Pods-SmartPot-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SmartPot/Pods-SmartPot-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		4DF2336C237C5FA900DE49D7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D8BF62A23912162008D9EE8 /* ChartTableViewCell.swift in Sources */,
 				4DF2337A237C5FA900DE49D7 /* HistoryViewController.swift in Sources */,
 				4DF23390237C673F00DE49D7 /* Plant.swift in Sources */,
 				4D10355C237D76C4004AD267 /* HomePageResponse.swift in Sources */,
+				4D8BF62F2391344D008D9EE8 /* HistoryResponse.swift in Sources */,
 				4DF23394237C6B4B00DE49D7 /* Temperature.swift in Sources */,
 				4DF23378237C5FA900DE49D7 /* HomeViewController.swift in Sources */,
 				4D90ED15238435AD008CAD78 /* UIColor+Additions.swift in Sources */,
@@ -204,6 +291,7 @@
 				4DF23374237C5FA900DE49D7 /* AppDelegate.swift in Sources */,
 				4DF23396237C6C2D00DE49D7 /* Humidity.swift in Sources */,
 				4DF23376237C5FA900DE49D7 /* SceneDelegate.swift in Sources */,
+				4D8BF631239138C9008D9EE8 /* ChartTimeFormatter.swift in Sources */,
 				4DF23392237C6B1E00DE49D7 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -346,6 +434,7 @@
 		};
 		4DF23387237C5FAB00DE49D7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0360B7C5A609A6C0FAA46CC7 /* Pods-SmartPot.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -358,12 +447,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = at.tu.vienna.fot.SmartPot;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		4DF23388237C5FAB00DE49D7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4012328A8F1582D4678CDD4B /* Pods-SmartPot.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -376,7 +466,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = at.tu.vienna.fot.SmartPot;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
