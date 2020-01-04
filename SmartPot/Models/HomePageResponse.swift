@@ -10,4 +10,8 @@ import Foundation
 
 public struct HomePageResponse: Codable {
     public let plants: [Plant]?
+
+    private enum CodingKeys: String, CodingKey {
+        case plants = "data"
+    }
 }

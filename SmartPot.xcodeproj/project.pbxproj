@@ -7,14 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D0AD47923BE9B1F00C8A8B6 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0AD47823BE9B1F00C8A8B6 /* NetworkManager.swift */; };
+		4D0AD47B23BFCC0300C8A8B6 /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0AD47A23BFCC0300C8A8B6 /* Toast.swift */; };
 		4D10355C237D76C4004AD267 /* HomePageResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D10355B237D76C4004AD267 /* HomePageResponse.swift */; };
 		4D10355E237D771D004AD267 /* homepage_example_response.json in Resources */ = {isa = PBXBuildFile; fileRef = 4D10355D237D771D004AD267 /* homepage_example_response.json */; };
+		4D32C7C923AFB48300843144 /* detailpage_example_response.json in Resources */ = {isa = PBXBuildFile; fileRef = 4D32C7C823AFB48300843144 /* detailpage_example_response.json */; };
 		4D8BF62A23912162008D9EE8 /* ChartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8BF62823912162008D9EE8 /* ChartTableViewCell.swift */; };
 		4D8BF62B23912162008D9EE8 /* ChartTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D8BF62923912162008D9EE8 /* ChartTableViewCell.xib */; };
 		4D8BF62D239133E3008D9EE8 /* history_example_response.json in Resources */ = {isa = PBXBuildFile; fileRef = 4D8BF62C239133E3008D9EE8 /* history_example_response.json */; };
 		4D8BF62F2391344D008D9EE8 /* HistoryResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8BF62E2391344D008D9EE8 /* HistoryResponse.swift */; };
 		4D8BF631239138C9008D9EE8 /* ChartTimeFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8BF630239138C9008D9EE8 /* ChartTimeFormatter.swift */; };
 		4D90ED15238435AD008CAD78 /* UIColor+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D90ED14238435AD008CAD78 /* UIColor+Additions.swift */; };
+		4DCA5B6623AFAEC900B169A4 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCA5B6523AFAEC900B169A4 /* DetailViewController.swift */; };
+		4DCA5B6823AFAF9200B169A4 /* DetailPageResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCA5B6723AFAF9200B169A4 /* DetailPageResponse.swift */; };
 		4DF23374237C5FA900DE49D7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF23373237C5FA900DE49D7 /* AppDelegate.swift */; };
 		4DF23376237C5FA900DE49D7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF23375237C5FA900DE49D7 /* SceneDelegate.swift */; };
 		4DF23378237C5FA900DE49D7 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF23377237C5FA900DE49D7 /* HomeViewController.swift */; };
@@ -35,14 +40,19 @@
 		0360B7C5A609A6C0FAA46CC7 /* Pods-SmartPot.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartPot.debug.xcconfig"; path = "Target Support Files/Pods-SmartPot/Pods-SmartPot.debug.xcconfig"; sourceTree = "<group>"; };
 		11712CD1208434909502197F /* Pods_SmartPot.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmartPot.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4012328A8F1582D4678CDD4B /* Pods-SmartPot.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartPot.release.xcconfig"; path = "Target Support Files/Pods-SmartPot/Pods-SmartPot.release.xcconfig"; sourceTree = "<group>"; };
+		4D0AD47823BE9B1F00C8A8B6 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		4D0AD47A23BFCC0300C8A8B6 /* Toast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
 		4D10355B237D76C4004AD267 /* HomePageResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageResponse.swift; sourceTree = "<group>"; };
 		4D10355D237D771D004AD267 /* homepage_example_response.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = homepage_example_response.json; sourceTree = "<group>"; };
+		4D32C7C823AFB48300843144 /* detailpage_example_response.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = detailpage_example_response.json; sourceTree = "<group>"; };
 		4D8BF62823912162008D9EE8 /* ChartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartTableViewCell.swift; sourceTree = "<group>"; };
 		4D8BF62923912162008D9EE8 /* ChartTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChartTableViewCell.xib; sourceTree = "<group>"; };
 		4D8BF62C239133E3008D9EE8 /* history_example_response.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = history_example_response.json; sourceTree = "<group>"; };
 		4D8BF62E2391344D008D9EE8 /* HistoryResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryResponse.swift; sourceTree = "<group>"; };
 		4D8BF630239138C9008D9EE8 /* ChartTimeFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartTimeFormatter.swift; sourceTree = "<group>"; };
 		4D90ED14238435AD008CAD78 /* UIColor+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Additions.swift"; sourceTree = "<group>"; };
+		4DCA5B6523AFAEC900B169A4 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		4DCA5B6723AFAF9200B169A4 /* DetailPageResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPageResponse.swift; sourceTree = "<group>"; };
 		4DF23370237C5FA900DE49D7 /* SmartPot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartPot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DF23373237C5FA900DE49D7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4DF23375237C5FA900DE49D7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -77,9 +87,26 @@
 			children = (
 				4D8BF62C239133E3008D9EE8 /* history_example_response.json */,
 				4D10355D237D771D004AD267 /* homepage_example_response.json */,
+				4D32C7C823AFB48300843144 /* detailpage_example_response.json */,
 				4D8BF630239138C9008D9EE8 /* ChartTimeFormatter.swift */,
 			);
 			path = Testing;
+			sourceTree = "<group>";
+		};
+		4DCA5B6223AFA95700B169A4 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				4D90ED14238435AD008CAD78 /* UIColor+Additions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		4DDB6C9E23C0AE390047DC3D /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				4D0AD47823BE9B1F00C8A8B6 /* NetworkManager.swift */,
+			);
+			path = Manager;
 			sourceTree = "<group>";
 		};
 		4DF23367237C5FA900DE49D7 = {
@@ -103,18 +130,21 @@
 		4DF23372237C5FA900DE49D7 /* SmartPot */ = {
 			isa = PBXGroup;
 			children = (
-				4D90ED14238435AD008CAD78 /* UIColor+Additions.swift */,
+				4DDB6C9E23C0AE390047DC3D /* Manager */,
+				4DCA5B6223AFA95700B169A4 /* Extensions */,
 				4D10355A237D76B4004AD267 /* Testing */,
 				4DF2338E237C673100DE49D7 /* Models */,
 				4DF23389237C5FFF00DE49D7 /* TableViewCells */,
 				4DF23373237C5FA900DE49D7 /* AppDelegate.swift */,
 				4DF23375237C5FA900DE49D7 /* SceneDelegate.swift */,
 				4DF23377237C5FA900DE49D7 /* HomeViewController.swift */,
+				4DCA5B6523AFAEC900B169A4 /* DetailViewController.swift */,
 				4DF23379237C5FA900DE49D7 /* HistoryViewController.swift */,
 				4DF2337B237C5FA900DE49D7 /* Main.storyboard */,
 				4DF2337E237C5FAB00DE49D7 /* Assets.xcassets */,
 				4DF23380237C5FAB00DE49D7 /* LaunchScreen.storyboard */,
 				4DF23383237C5FAB00DE49D7 /* Info.plist */,
+				4D0AD47A23BFCC0300C8A8B6 /* Toast.swift */,
 			);
 			path = SmartPot;
 			sourceTree = "<group>";
@@ -139,6 +169,7 @@
 				4DF23395237C6C2D00DE49D7 /* Humidity.swift */,
 				4D10355B237D76C4004AD267 /* HomePageResponse.swift */,
 				4D8BF62E2391344D008D9EE8 /* HistoryResponse.swift */,
+				4DCA5B6723AFAF9200B169A4 /* DetailPageResponse.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -222,6 +253,7 @@
 			files = (
 				4DF23382237C5FAB00DE49D7 /* LaunchScreen.storyboard in Resources */,
 				4DF2337F237C5FAB00DE49D7 /* Assets.xcassets in Resources */,
+				4D32C7C923AFB48300843144 /* detailpage_example_response.json in Resources */,
 				4D8BF62B23912162008D9EE8 /* ChartTableViewCell.xib in Resources */,
 				4D10355E237D771D004AD267 /* homepage_example_response.json in Resources */,
 				4D8BF62D239133E3008D9EE8 /* history_example_response.json in Resources */,
@@ -281,16 +313,20 @@
 			files = (
 				4D8BF62A23912162008D9EE8 /* ChartTableViewCell.swift in Sources */,
 				4DF2337A237C5FA900DE49D7 /* HistoryViewController.swift in Sources */,
+				4D0AD47923BE9B1F00C8A8B6 /* NetworkManager.swift in Sources */,
 				4DF23390237C673F00DE49D7 /* Plant.swift in Sources */,
 				4D10355C237D76C4004AD267 /* HomePageResponse.swift in Sources */,
 				4D8BF62F2391344D008D9EE8 /* HistoryResponse.swift in Sources */,
 				4DF23394237C6B4B00DE49D7 /* Temperature.swift in Sources */,
+				4D0AD47B23BFCC0300C8A8B6 /* Toast.swift in Sources */,
+				4DCA5B6623AFAEC900B169A4 /* DetailViewController.swift in Sources */,
 				4DF23378237C5FA900DE49D7 /* HomeViewController.swift in Sources */,
 				4D90ED15238435AD008CAD78 /* UIColor+Additions.swift in Sources */,
 				4DF2338C237C602500DE49D7 /* PotOverviewTableViewCell.swift in Sources */,
 				4DF23374237C5FA900DE49D7 /* AppDelegate.swift in Sources */,
 				4DF23396237C6C2D00DE49D7 /* Humidity.swift in Sources */,
 				4DF23376237C5FA900DE49D7 /* SceneDelegate.swift in Sources */,
+				4DCA5B6823AFAF9200B169A4 /* DetailPageResponse.swift in Sources */,
 				4D8BF631239138C9008D9EE8 /* ChartTimeFormatter.swift in Sources */,
 				4DF23392237C6B1E00DE49D7 /* User.swift in Sources */,
 			);

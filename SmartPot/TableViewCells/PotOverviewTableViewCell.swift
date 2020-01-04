@@ -20,9 +20,7 @@ class PotOverviewTableViewCell: UITableViewCell {
     @IBOutlet weak var humidityImageView: UIImageView?
     @IBOutlet weak var temperatureImageView: UIImageView?
     @IBOutlet weak var plantStatusImageView: UIImageView?
-    @IBOutlet weak var temperatureWarningImageView: UIImageView?
-    @IBOutlet weak var humidityWarningImageView: UIImageView?
-    @IBOutlet weak var waterWarningImageView: UIImageView?
+    @IBOutlet weak var waterImageView: UIImageView?
 
     public var model: Plant? {
         didSet {
@@ -33,31 +31,34 @@ class PotOverviewTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        temperatureImageView?.image = UIImage(systemName: "thermometer")
+        humidityImageView?.image = UIImage(systemName: "wind")
         updateForModel()
+
+
     }
 
     private func updateForModel() {
         guard let model = model else { return }
 
         plantTitleLabel?.text = model.name
-        if let temp = model.temperatureTreshold {
+        if let temp = model.temperature {
             temperatureLabel?.text = String(describing: temp) + " °C"
-            if temp < 10 {
+            if let treshold = model.temperatureTreshold, temp < treshold  {
                 temperatureImageView?.tintColor = .systemRed
                 temperatureLabel?.textColor = .systemRed
             }
         }
 
-        if let hum = model.humidityTreshold {
+        if let hum = model.humidity {
             humidityLabel?.text = String(describing: hum) + " %"
-            if hum < 20 {
+            if let treshold = model.humidityTreshold, hum < treshold {
                 humidityImageView?.tintColor = .systemRed
                 humidityLabel?.textColor = .systemRed
             }
         }
 
-        let status = PlantStatus(rawValue: model.status ?? 0)
-        switch status {
+        switch model.status {
         case .green:
             plantStatusImageView?.backgroundColor = .systemGreen
         case .red:
@@ -74,6 +75,7 @@ class PotOverviewTableViewCell: UITableViewCell {
             containerView.layer.shadowOpacity = 1
             containerView.layer.shadowOffset = .zero
             containerView.layer.shadowRadius = 7
+            containerView.layer.cornerRadius = 20
         }
 
     }

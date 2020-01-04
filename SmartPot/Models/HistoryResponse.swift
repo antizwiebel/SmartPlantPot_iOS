@@ -39,6 +39,7 @@ public struct DataPoint: Codable, Comparable {
         lhs.date < rhs.date
     }
 
+
     public let value: Float
     public let date: Int
 

@@ -12,20 +12,60 @@ class HomeViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
 
+    @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
+
     private var homePage: HomePageResponse?
+    private let refreshControl = UIRefreshControl()
+    private var selectedPlantIndex = -1
+
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        self.navigationController?.navigationBar.prefersLargeTitles = true
         title = "Home"
         tableView.dataSource = self
+        tableView.delegate = self
         tableView.register(UINib(nibName: "PotOverviewTableViewCell", bundle: nil), forCellReuseIdentifier: "PotOverviewTableViewCell")
-        homePage = loadJson(filename: "homepage_example_response")
+        loadHomePage()
 
+        tableView.refreshControl = refreshControl
+        refreshControl.addTarget(self, action: #selector(refreshPlantData(_:)), for: .valueChanged)
+        refreshControl.tintColor = .orange
+        refreshControl.attributedTitle = NSAttributedString(string: "Fetching Plant Data ...")
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.navigationBar.prefersLargeTitles = true
+    }
 
-    func loadJson(filename fileName: String) -> HomePageResponse? {
+    @objc private func refreshPlantData(_ sender: Any) {
+        // Fetch Weather Data
+        self.activityIndicatorView.startAnimating()
+        loadHomePage()
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+            self.refreshControl.endRefreshing()
+            self.activityIndicatorView.stopAnimating()
+        }
+    }
+
+    @IBAction func refreshButtonTapped(_ sender: Any) {
+        refreshPlantData(sender)
+    }
+
+    private func loadHomePage() {
+        NetworkManager.shared().requestHomePage(success: { plants in
+            Toast.show(message: plants.plants?.first?.name ?? "BLA", controller: self)
+            self.homePage = plants
+            self.tableView.reloadData()
+            self.refreshControl.endRefreshing()
+            self.activityIndicatorView.stopAnimating()
+        }) { errorString in
+            Toast.show(message: errorString ?? "Error occurred", controller: self)
+            self.refreshControl.endRefreshing()
+            self.activityIndicatorView.stopAnimating()
+        }
+    }
+
+    private func loadJson(filename fileName: String) -> HomePageResponse? {
         if let url = Bundle.main.url(forResource: fileName, withExtension: "json") {
             do {
                 let data = try Data(contentsOf: url)
@@ -38,10 +78,21 @@ class HomeViewController: UIViewController {
         }
         return nil
     }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showDetail", let selectedPlant = homePage?.plants?[selectedPlantIndex] {
+            (segue.destination as? DetailViewController)?.model = DetailPageResponse(plant: selectedPlant,
+                                                                                     history: nil)
+        }
+    }
 }
 
 extension HomeViewController: UITableViewDelegate {
 
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectedPlantIndex = indexPath.row
+        performSegue(withIdentifier: "showDetail", sender: self)
+    }
 }
 
 extension HomeViewController: UITableViewDataSource {

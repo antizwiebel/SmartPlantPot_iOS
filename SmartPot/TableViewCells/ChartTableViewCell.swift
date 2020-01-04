@@ -20,7 +20,7 @@ class ChartTableViewCell: UITableViewCell {
     public struct Model {
         public let title: String
         public let dataPoints: [DataPoint]?
-        public let treshold: Double?
+        public let treshold: Float?
     }
 
     public var model: Model? {
@@ -46,21 +46,26 @@ class ChartTableViewCell: UITableViewCell {
         formatter.timeStyle = .none
         formatter.locale = Locale.current
 
+        // check if time intervals are within a day
+        if let min = dataPoints.min()?.date, let max = dataPoints.max()?.date,
+            (max - min) < (3600 * 24) {
+            formatter.dateFormat = "HH:mm"
+        }
+
         let xValuesNumberFormatter = ChartXAxisFormatter(referenceTimeInterval: referenceTimeInterval, dateFormatter: formatter)
 
         lineChartView?.xAxis.valueFormatter = xValuesNumberFormatter
-
+        
         // Define chart entries
         var entries = [ChartDataEntry]()
         var tresholdEntries = [ChartDataEntry]()
         for object in dataPoints {
             let xValue = (TimeInterval(object.date) - referenceTimeInterval) / (3600 * 24)
-
             let yValue = object.value
             let entry = ChartDataEntry(x: xValue, y: Double(yValue))
             entries.append(entry)
             if let treshold = historyObject.treshold {
-                tresholdEntries.append(ChartDataEntry(x: xValue, y: treshold))
+                tresholdEntries.append(ChartDataEntry(x: xValue, y: Double(treshold)))
             }
         }
 
@@ -70,7 +75,8 @@ class ChartTableViewCell: UITableViewCell {
         line1.colors = [.orange]
 
         line2.colors = [.systemRed]
-        line2.circleRadius = 0.5
+        line2.drawCirclesEnabled = false
+        line2.drawValuesEnabled = false
 
         let data = LineChartData()
         data.addDataSet(line1)

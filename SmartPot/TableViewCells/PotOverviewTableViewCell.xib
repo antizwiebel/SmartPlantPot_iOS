@@ -51,6 +51,7 @@
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="humidity" highlightedImage="humidity" translatesAutoresizingMaskIntoConstraints="NO" id="gSz-OA-Yqj">
                                         <rect key="frame" x="134" y="1.5" width="24" height="24"/>
+                                        <color key="tintColor" name="black"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="24" id="hv8-an-ubk"/>
                                             <constraint firstAttribute="height" constant="24" id="oyW-pZ-fhM"/>
@@ -64,6 +65,7 @@
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="drop" translatesAutoresizingMaskIntoConstraints="NO" id="iqv-Js-Kp9">
                                         <rect key="frame" x="268" y="1.5" width="24" height="24"/>
+                                        <color key="tintColor" name="black"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="24" id="FJP-nG-zen"/>
                                             <constraint firstAttribute="height" constant="24" id="yY1-Sb-lY0"/>
@@ -130,6 +132,7 @@
                 <outlet property="plantTitleLabel" destination="wzQ-mZ-CV9" id="jaK-19-3ne"/>
                 <outlet property="temperatureImageView" destination="Huy-mL-k5L" id="4vh-Vr-hAh"/>
                 <outlet property="temperatureLabel" destination="rdd-f4-KG4" id="Yxc-3w-Z33"/>
+                <outlet property="waterImageView" destination="iqv-Js-Kp9" id="dK0-op-Xgj"/>
             </connections>
             <point key="canvasLocation" x="91.304347826086968" y="247.76785714285714"/>
         </tableViewCell>

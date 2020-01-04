@@ -17,7 +17,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XXC-is-iB3" customClass="LineChartView" customModule="Charts">
-                        <rect key="frame" x="0.0" y="172" width="317" height="300"/>
+                        <rect key="frame" x="16" y="172" width="285" height="300"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="300" id="drc-Gg-QBP"/>
@@ -34,11 +34,11 @@
                 <constraints>
                     <constraint firstItem="r5R-Mg-YYI" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="489-dQ-Myl"/>
                     <constraint firstItem="r5R-Mg-YYI" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="24" id="5Bh-TH-7Hu"/>
-                    <constraint firstItem="XXC-is-iB3" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="6ll-ZZ-Epo"/>
+                    <constraint firstItem="XXC-is-iB3" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="6ll-ZZ-Epo"/>
                     <constraint firstAttribute="trailing" secondItem="r5R-Mg-YYI" secondAttribute="trailing" constant="16" id="EGO-Ic-rkj"/>
                     <constraint firstItem="XXC-is-iB3" firstAttribute="top" secondItem="r5R-Mg-YYI" secondAttribute="bottom" constant="24" id="LpV-7J-Y2E"/>
                     <constraint firstAttribute="bottom" secondItem="XXC-is-iB3" secondAttribute="bottom" id="NcL-gY-t9z"/>
-                    <constraint firstAttribute="trailing" secondItem="XXC-is-iB3" secondAttribute="trailing" id="t86-oP-DDk"/>
+                    <constraint firstAttribute="trailing" secondItem="XXC-is-iB3" secondAttribute="trailing" constant="16" id="t86-oP-DDk"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
