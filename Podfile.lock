@@ -6,6 +6,11 @@ PODS:
     - Charts/Core (= 3.4.0)
   - Charts/Core (3.4.0)
   - Eureka (5.1.0)
+  - ImageViewer.swift (3.0.10):
+    - SDWebImage
+  - SDWebImage (5.5.1):
+    - SDWebImage/Core (= 5.5.1)
+  - SDWebImage/Core (5.5.1)
   - Segmentio (4.1)
 
 DEPENDENCIES:
@@ -13,6 +18,7 @@ DEPENDENCIES:
   - AlamofireImage (~> 3.5)
   - Charts
   - Eureka
+  - ImageViewer.swift (~> 3.0)
   - Segmentio
 
 SPEC REPOS:
@@ -21,6 +27,8 @@ SPEC REPOS:
     - AlamofireImage
     - Charts
     - Eureka
+    - ImageViewer.swift
+    - SDWebImage
     - Segmentio
 
 SPEC CHECKSUMS:
@@ -28,8 +36,10 @@ SPEC CHECKSUMS:
   AlamofireImage: be9963c6582d68b39e89191f64c82a7d7bf40fdd
   Charts: 74c9f256eaf0460c0c416522d1cf8c634ea6b286
   Eureka: 18a5076dcf0c41f9cd9748aa1c42f4d11434bdae
+  ImageViewer.swift: 9bff2405a5c0a523092a8c031a7bf80c1433e7f4
+  SDWebImage: 1245d058b7b8f59adef7a6da6bbafd4f1ab67041
   Segmentio: ab29def64e1bff6e6e9b97671788a99bed3f1d9f
 
-PODFILE CHECKSUM: 48eb4bf1b70e2a5cd2e309752a34cf4d79f42338
+PODFILE CHECKSUM: 7fa7746c37cd01cfa01004935f6aa660c4917262
 
 COCOAPODS: 1.8.4

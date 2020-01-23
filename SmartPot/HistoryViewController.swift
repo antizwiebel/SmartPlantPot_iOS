@@ -81,7 +81,7 @@ class HistoryViewController: UIViewController {
     }
 
     func loadHistoryPage() {
-        NetworkManager.shared().requestHistoryPage(success: { plantHistory in
+        NetworkManager.shared().requestHistoryPage(forPlantId: 1, success: { plantHistory in
             self.historyPage = plantHistory
             self.selectedHistoryObject = plantHistory.plantHistory
             self.tableView.reloadData()

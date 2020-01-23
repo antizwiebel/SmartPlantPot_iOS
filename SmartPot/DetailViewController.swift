@@ -58,7 +58,7 @@ class DetailViewController: UIViewController {
     }
 
     func fetchPlantHistory() {
-        NetworkManager.shared().requestHistoryPage(success: { historyResponse in
+        NetworkManager.shared().requestHistoryPage(forPlantId: 1, success: { historyResponse in
             self.model?.history = historyResponse.plantHistory
             self.tableView.reloadData()
             self.refreshControl.endRefreshing()

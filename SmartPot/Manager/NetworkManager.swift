@@ -12,7 +12,7 @@ import Alamofire
 enum ApiEndpoints: String {
     case homePage = "http://www.trabby.at/spp/api/plant/read.php"
     case plantUpdate = "http://www.trabby.at/spp/api/plant/update_from_app.php"
-    case history = "http://www.trabby.at/spp/api/measurement/read_by_plant_sorted.php?plant_id=1"
+    case history = "http://www.trabby.at/spp/api/measurement/read_by_plant_sorted.php?plant_id="
 }
 
 class NetworkManager {
@@ -46,9 +46,9 @@ class NetworkManager {
         request(forURL: ApiEndpoints.homePage.rawValue, success: success, failure: failure, decodable: HomePageResponse.self)
     }
 
-    func requestHistoryPage(success: @escaping (_ response: HistoryPageResponse) -> Void,
+    func requestHistoryPage(forPlantId: Int, success: @escaping (_ response: HistoryPageResponse) -> Void,
                          failure: @escaping (_ error: String?) -> Void) {
-        request(forURL: ApiEndpoints.history.rawValue, success: success, failure: failure, decodable: HistoryPageResponse.self)
+        request(forURL: ApiEndpoints.history.rawValue + String(forPlantId), success: success, failure: failure, decodable: HistoryPageResponse.self)
     }
 
     func requestPlantUpdate(withPlantModel: Plant, success: @escaping () -> Void,

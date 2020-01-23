@@ -8,6 +8,7 @@
 
 import UIKit
 import AlamofireImage
+import ImageViewer_swift
 
 class PlantOverviewTableViewCell: UITableViewCell {
 
@@ -159,7 +160,8 @@ class PlantOverviewTableViewCell: UITableViewCell {
             let placeholderImage = UIImage(named: plantImage)
 
             webcamImageView?.af_setImage(withURL: url, placeholderImage: placeholderImage)
-             webcamImageHeightConstraint?.constant = 210
+            webcamImageView?.setupImageViewer(url: url)
+            webcamImageHeightConstraint?.constant = 210
         } else {
             webcamImageHeightConstraint?.constant = 0
             webcamImageView?.isHidden = true

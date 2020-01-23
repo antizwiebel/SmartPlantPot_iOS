@@ -33,12 +33,12 @@
 		4DF23390237C673F00DE49D7 /* Plant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF2338F237C673F00DE49D7 /* Plant.swift */; };
 		4DF23392237C6B1E00DE49D7 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF23391237C6B1E00DE49D7 /* User.swift */; };
 		4DF23394237C6B4B00DE49D7 /* Measurement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF23393237C6B4B00DE49D7 /* Measurement.swift */; };
-		C678D076E007363931C87F7C /* Pods_SmartPot.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11712CD1208434909502197F /* Pods_SmartPot.framework */; };
+		A18869E3CA2F30C9B4334A3F /* Pods_SmartPlantPot.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18502960862C0B9C929597A7 /* Pods_SmartPlantPot.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0360B7C5A609A6C0FAA46CC7 /* Pods-SmartPot.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartPot.debug.xcconfig"; path = "Target Support Files/Pods-SmartPot/Pods-SmartPot.debug.xcconfig"; sourceTree = "<group>"; };
-		11712CD1208434909502197F /* Pods_SmartPot.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmartPot.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		18502960862C0B9C929597A7 /* Pods_SmartPlantPot.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmartPlantPot.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4012328A8F1582D4678CDD4B /* Pods-SmartPot.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartPot.release.xcconfig"; path = "Target Support Files/Pods-SmartPot/Pods-SmartPot.release.xcconfig"; sourceTree = "<group>"; };
 		4D0AD47823BE9B1F00C8A8B6 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		4D0AD47A23BFCC0300C8A8B6 /* Toast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
@@ -54,7 +54,7 @@
 		4DA6F74723D4913D0035F503 /* EditPlantFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPlantFormViewController.swift; sourceTree = "<group>"; };
 		4DCA5B6523AFAEC900B169A4 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		4DCA5B6723AFAF9200B169A4 /* DetailPageResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPageResponse.swift; sourceTree = "<group>"; };
-		4DF23370237C5FA900DE49D7 /* SmartPot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartPot.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4DF23370237C5FA900DE49D7 /* Smart Plant Pot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Smart Plant Pot.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DF23373237C5FA900DE49D7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4DF23375237C5FA900DE49D7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		4DF23377237C5FA900DE49D7 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -68,6 +68,8 @@
 		4DF2338F237C673F00DE49D7 /* Plant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plant.swift; sourceTree = "<group>"; };
 		4DF23391237C6B1E00DE49D7 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		4DF23393237C6B4B00DE49D7 /* Measurement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Measurement.swift; sourceTree = "<group>"; };
+		F4DF4BD8903EECBEB29EA150 /* Pods-SmartPlantPot.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartPlantPot.debug.xcconfig"; path = "Target Support Files/Pods-SmartPlantPot/Pods-SmartPlantPot.debug.xcconfig"; sourceTree = "<group>"; };
+		FBA41CB4FB8DAE378F1BD665 /* Pods-SmartPlantPot.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartPlantPot.release.xcconfig"; path = "Target Support Files/Pods-SmartPlantPot/Pods-SmartPlantPot.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,7 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C678D076E007363931C87F7C /* Pods_SmartPot.framework in Frameworks */,
+				A18869E3CA2F30C9B4334A3F /* Pods_SmartPlantPot.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -122,7 +124,7 @@
 		4DF23371237C5FA900DE49D7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4DF23370237C5FA900DE49D7 /* SmartPot.app */,
+				4DF23370237C5FA900DE49D7 /* Smart Plant Pot.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -177,7 +179,7 @@
 		D55F086ADE560F4F56B9984A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				11712CD1208434909502197F /* Pods_SmartPot.framework */,
+				18502960862C0B9C929597A7 /* Pods_SmartPlantPot.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -187,6 +189,8 @@
 			children = (
 				0360B7C5A609A6C0FAA46CC7 /* Pods-SmartPot.debug.xcconfig */,
 				4012328A8F1582D4678CDD4B /* Pods-SmartPot.release.xcconfig */,
+				F4DF4BD8903EECBEB29EA150 /* Pods-SmartPlantPot.debug.xcconfig */,
+				FBA41CB4FB8DAE378F1BD665 /* Pods-SmartPlantPot.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -194,9 +198,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		4DF2336F237C5FA900DE49D7 /* SmartPot */ = {
+		4DF2336F237C5FA900DE49D7 /* SmartPlantPot */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4DF23386237C5FAB00DE49D7 /* Build configuration list for PBXNativeTarget "SmartPot" */;
+			buildConfigurationList = 4DF23386237C5FAB00DE49D7 /* Build configuration list for PBXNativeTarget "SmartPlantPot" */;
 			buildPhases = (
 				72FFD010A61CE96BFA930A7C /* [CP] Check Pods Manifest.lock */,
 				4DF2336C237C5FA900DE49D7 /* Sources */,
@@ -208,9 +212,9 @@
 			);
 			dependencies = (
 			);
-			name = SmartPot;
+			name = SmartPlantPot;
 			productName = SmartPot;
-			productReference = 4DF23370237C5FA900DE49D7 /* SmartPot.app */;
+			productReference = 4DF23370237C5FA900DE49D7 /* Smart Plant Pot.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -228,7 +232,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 4DF2336B237C5FA900DE49D7 /* Build configuration list for PBXProject "SmartPot" */;
+			buildConfigurationList = 4DF2336B237C5FA900DE49D7 /* Build configuration list for PBXProject "SmartPlantPot" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -241,7 +245,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				4DF2336F237C5FA900DE49D7 /* SmartPot */,
+				4DF2336F237C5FA900DE49D7 /* SmartPlantPot */,
 			);
 		};
 /* End PBXProject section */
@@ -280,7 +284,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-SmartPot-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-SmartPlantPot-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -293,15 +297,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SmartPot/Pods-SmartPot-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-SmartPlantPot/Pods-SmartPlantPot-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SmartPot/Pods-SmartPot-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-SmartPlantPot/Pods-SmartPlantPot-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SmartPot/Pods-SmartPot-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SmartPlantPot/Pods-SmartPlantPot-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -470,7 +474,7 @@
 		};
 		4DF23387237C5FAB00DE49D7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0360B7C5A609A6C0FAA46CC7 /* Pods-SmartPot.debug.xcconfig */;
+			baseConfigurationReference = F4DF4BD8903EECBEB29EA150 /* Pods-SmartPlantPot.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -481,8 +485,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = at.tu.vienna.fot.SmartPot;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = at.tu.vienna.fot.SmartPlantPot;
+				PRODUCT_NAME = "Smart Plant Pot";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -490,7 +494,7 @@
 		};
 		4DF23388237C5FAB00DE49D7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4012328A8F1582D4678CDD4B /* Pods-SmartPot.release.xcconfig */;
+			baseConfigurationReference = FBA41CB4FB8DAE378F1BD665 /* Pods-SmartPlantPot.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -501,8 +505,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = at.tu.vienna.fot.SmartPot;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = at.tu.vienna.fot.SmartPlantPot;
+				PRODUCT_NAME = "Smart Plant Pot";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -511,7 +515,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4DF2336B237C5FA900DE49D7 /* Build configuration list for PBXProject "SmartPot" */ = {
+		4DF2336B237C5FA900DE49D7 /* Build configuration list for PBXProject "SmartPlantPot" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4DF23384237C5FAB00DE49D7 /* Debug */,
@@ -520,7 +524,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4DF23386237C5FAB00DE49D7 /* Build configuration list for PBXNativeTarget "SmartPot" */ = {
+		4DF23386237C5FAB00DE49D7 /* Build configuration list for PBXNativeTarget "SmartPlantPot" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4DF23387237C5FAB00DE49D7 /* Debug */,
