@@ -20,6 +20,7 @@ Currently this app uses our specific API endpoint at trabby.at. If you want to c
 ## Software Versions
 
 Xcode 11 / Swift 5 (master branch)
+
 required iOS >= 13.0 
 
 ### Acknowledgements
