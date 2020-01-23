@@ -16,6 +16,7 @@ class ChartTableViewCell: UITableViewCell {
     @IBOutlet private weak var lineChartView: LineChartView?
 
     @IBOutlet private weak var titleLabel: UILabel?
+    @IBOutlet weak var chartSizeConstraint: NSLayoutConstraint?
 
     weak var axisFormatDelegate: IAxisValueFormatter?
 
@@ -23,6 +24,14 @@ class ChartTableViewCell: UITableViewCell {
         public let title: String
         public let measurements: [Measurement]?
         public let treshold: Float?
+        public var chartSize: CGFloat = 450.0
+
+        init(title: String, measurements: [Measurement]?, treshold: Float?, chartSize: CGFloat = 450.0) {
+            self.title = title
+            self.measurements = measurements
+            self.treshold = treshold
+            self.chartSize = chartSize
+        }
     }
 
     public var model: Model? {
@@ -36,6 +45,8 @@ class ChartTableViewCell: UITableViewCell {
         guard let historyObject = model, let dataPoints = historyObject.measurements?.reversed() else { return }
         titleLabel?.text = historyObject.title
 
+        chartSizeConstraint?.constant = historyObject.chartSize
+
         // Define the reference time interval
         var referenceTimeInterval: TimeInterval = 0
         if let minTimeInterval = dataPoints.min()?.date.timeIntervalSince1970 {
@@ -44,7 +55,7 @@ class ChartTableViewCell: UITableViewCell {
 
         // Define chart xValues formatter
         let formatter = DateFormatter()
-        formatter.dateFormat = "MM-dd HH:mm"
+        formatter.dateFormat = "dd.MM HH:mm"
 
         // check if time intervals are within a day
         if let min = dataPoints.min()?.date, let max = dataPoints.max()?.date,
@@ -72,7 +83,7 @@ class ChartTableViewCell: UITableViewCell {
 
         // create chart lines
         let line1 = LineChartDataSet(entries: entries, label: historyObject.title)
-        let line2 = LineChartDataSet(entries: tresholdEntries, label: "Treshold")
+        let line2 = LineChartDataSet(entries: tresholdEntries, label: "Lower Treshold")
 
         // style lines
         line1.colors = [.orange]
@@ -97,6 +108,8 @@ class ChartTableViewCell: UITableViewCell {
         lineChartView?.xAxis.labelRotationAngle = -90
         lineChartView?.data = data
         lineChartView?.chartDescription?.text = historyObject.title + "Values"
+
+        updateConstraintsIfNeeded()
     }
 
     override func awakeFromNib() {

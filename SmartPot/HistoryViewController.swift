@@ -21,6 +21,10 @@ class HistoryViewController: UIViewController {
 
     private let refreshControl = UIRefreshControl()
 
+    private let plantImages = ["plant", "botanic_1", "botanic_2", "botanical", "bamboo", "monstera"]
+
+    private var plantTresholds: (humidityTreshold: Float?, temperatureTreshold: Float?)? = nil
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -31,23 +35,23 @@ class HistoryViewController: UIViewController {
 
         var content = [SegmentioItem]()
 
-        let tornadoItem = SegmentioItem(
+        let standardItem = SegmentioItem(
             title: "Plant 1",
             image: UIImage(named: "plant")
         )
-        content.append(tornadoItem)
+        content.append(standardItem)
 
-        let tornadoItem2 = SegmentioItem(
+        let standardItem2 = SegmentioItem(
             title: "Plant 2",
             image: UIImage(named: "botanic_1")
         )
-        content.append(tornadoItem2)
+        content.append(standardItem2)
 
-        let tornadoItem3 = SegmentioItem(
+        let standardItem3 = SegmentioItem(
             title: "Plant 3",
             image: UIImage(named: "botanic_2")
         )
-        content.append(tornadoItem3)
+        content.append(standardItem3)
 
         let options = SegmentioOptions(backgroundColor: .white, segmentPosition: .dynamic, scrollEnabled: true, indicatorOptions: SegmentioIndicatorOptions(type: .bottom, ratio: 1, height: 5, color: .systemOrange), horizontalSeparatorOptions: SegmentioHorizontalSeparatorOptions(type: .bottom, height: 0.5, color: .black30), verticalSeparatorOptions: SegmentioVerticalSeparatorOptions(ratio: 0.5, color: .black30), imageContentMode: .scaleAspectFit, labelTextAlignment: .center, labelTextNumberOfLines: 2, segmentStates: SegmentioStates(
                     defaultState: SegmentioState(
@@ -80,6 +84,38 @@ class HistoryViewController: UIViewController {
 
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+
+        loadPlants()
+    }
+
+    func loadPlants() {
+
+        NetworkManager.shared().requestHomePage(success: { plantsResponse in
+
+            guard let plants = plantsResponse.plants else { return }
+
+            var content = [SegmentioItem]()
+
+            for i in 0...(plants.count-1) {
+                let item = SegmentioItem(
+                    title: plants[i].name,
+                    image: UIImage(named: self.plantImages[i % self.plantImages.count])
+                )
+                content.append(item)
+            }
+
+            // get the tresholds from only the first plant since we know that is the only with data
+            self.plantTresholds = (humidityTreshold: plants.first?.humidityTreshold, temperatureTreshold: plants.first?.temperatureTreshold)
+
+            self.segmentioView.setup(content: content, style: .imageOverLabel, options: nil)
+
+        }) { errorString in
+            print(errorString)
+        }
+    }
+
     func loadHistoryPage() {
         NetworkManager.shared().requestHistoryPage(forPlantId: 1, success: { plantHistory in
             self.historyPage = plantHistory
@@ -91,9 +127,13 @@ class HistoryViewController: UIViewController {
     }
 
     private func selectedPlantDidChange(atIndex index: Int) {
-        guard let selectedObject = historyPage?.plantHistory else { return }
-        selectedHistoryObject = selectedObject
-        tableView.reloadData()
+        if index != 0 {
+            selectedHistoryObject = nil
+            tableView.reloadData()
+        } else {
+            selectedHistoryObject = historyPage?.plantHistory
+            tableView.reloadData()
+        }
     }
 }
 
@@ -115,13 +155,13 @@ extension HistoryViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ChartTableViewCell", for: indexPath)
         if let potCell = cell as? ChartTableViewCell {
             if indexPath.row % 3 == 0 {
-                let model = ChartTableViewCell.Model(title: "Soil Humidity", measurements: selectedHistoryObject?.humiditySoil, treshold: nil)
+                let model = ChartTableViewCell.Model(title: "Soil Humidity", measurements: selectedHistoryObject?.humiditySoil, treshold: plantTresholds?.humidityTreshold)
                 potCell.model = model
             } else if indexPath.row % 3 == 1 {
-                let model = ChartTableViewCell.Model(title: "Air Humidity", measurements: selectedHistoryObject?.humidityAir, treshold: nil)
+                let model = ChartTableViewCell.Model(title: "Air Humidity", measurements: selectedHistoryObject?.humidityAir, treshold: plantTresholds?.humidityTreshold, chartSize: 350.0)
                 potCell.model = model
             } else  {
-                let model = ChartTableViewCell.Model(title: "Temperature", measurements: selectedHistoryObject?.temperature, treshold: nil)
+                let model = ChartTableViewCell.Model(title: "Temperature", measurements: selectedHistoryObject?.temperature, treshold: plantTresholds?.temperatureTreshold, chartSize: 350.0)
                 potCell.model = model
             }
         }
