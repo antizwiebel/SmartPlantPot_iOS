@@ -1,37 +1,40 @@
 {
   "plants": [
     {
-      "temperature": 24.5,
-      "active": true,
+      "temperature": 54.5,
+      "active": 1,
       "humidity": 75,
       "id": 123,
       "name": "PlantyMCPlantface",
-      "dateAdded": 1573731349,
-      "temperatureTreshold": 50,
+      "dateAdded": "2019-12-30 09:53:45",
+      "temperatureTreshold": 89,
       "humidityTreshold": 95,
-      "ownerId": 1234
+      "owner_id": 1234,
+      "status": "green"
     },
     {
-      "temperature": 24.5,
-      "active": true,
-      "humidity": 75,
+      "temperature": 89.5,
+      "active": 1,
+      "humidity": 5,
       "id": 124,
-      "name": "PlantyMCPlantface2",
-      "dateAdded": 1573731349,
-      "temperatureTreshold": 50,
+      "name": "Plant The Band",
+      "dateAdded": "2019-12-30 09:53:45",
+      "temperatureTreshold": 5,
       "humidityTreshold": 95,
-      "ownerId": 1234
+      "owner_id": 1234,
+      "status": "yellow"
     },
     {
       "temperature": 24.5,
-      "active": true,
-      "humidity": 75,
+      "active": 1,
+      "humidity": 10,
       "id": 125,
-      "name": "PlantyMCPlantface3",
-      "dateAdded": 1573731349,
+      "name": "Planty of fish out there",
+      "dateAdded": "2019-12-30 09:53:45",
       "temperatureTreshold": 50,
       "humidityTreshold": 95,
-      "ownerId": 1234
+      "owner_id": 1234,
+      "status": "red"
     }
   ]
 }

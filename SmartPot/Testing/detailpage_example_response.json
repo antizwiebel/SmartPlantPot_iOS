@@ -1,0 +1,84 @@
+{
+  "plant":
+    {
+      "temperature": 54.5,
+      "active": 1,
+      "humidity": 75,
+      "id": 123,
+      "name": "PlantyMCPlantface",
+      "dateAdded": "2019-12-30 09:53:45",
+      "temperatureTreshold": 89,
+      "humidityTreshold": 95,
+      "owner_id": 1234,
+      "status": "green"
+    },
+    "history":  {
+      "active": true,
+      "id": 123,
+      "name": "PlantyMCPlantface",
+      "dateAdded": 1573731349,
+      "temperatureTreshold": 50,
+      "humidityTreshold": 95,
+      "ownerId": 1234,
+      "temperatures": [
+        { "value": 45,
+          "date": 1573731349
+        },
+        { "value": 55,
+          "date": 1574731349
+        },
+        { "value": 65,
+          "date": 1575029434
+        },
+        { "value": 25,
+          "date": 1575529434
+        },
+        { "value": 35,
+          "date": 1576029389
+        },
+        { "value": 45,
+          "date": 1577029389
+        }
+      ],
+      "humidities": [
+        { "value": 45,
+          "date": 1575028800
+        },
+        { "value": 18,
+          "date": 1575032400
+        },
+        { "value": 69,
+          "date": 1575036000
+        },
+        { "value": 44,
+          "date": 1575039600
+        },
+        { "value": 98,
+          "date": 1575043200
+        },
+        { "value": 90,
+          "date": 1575050400
+        }
+      ],
+      "water": [
+        { "value": 45,
+          "date": 1573731349
+        },
+        { "value": 1055,
+          "date": 1574731349
+        },
+        { "value": 465,
+          "date": 1575029434
+        },
+        { "value": 25,
+          "date": 1575529434
+        },
+        { "value": 135,
+          "date": 1576029389
+        },
+        { "value": 445,
+          "date": 1577029389
+        }
+      ]
+    }
+}

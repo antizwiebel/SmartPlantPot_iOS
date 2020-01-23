@@ -1,0 +1,6 @@
+framework module Pods_SmartPot {
+  umbrella header "Pods-SmartPot-umbrella.h"
+
+  export *
+  module * { export * }
+}
