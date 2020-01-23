@@ -2,15 +2,15 @@
   "plant":
     {
       "temperature": 54.5,
-      "active": true,
+      "active": 1,
       "humidity": 75,
       "id": 123,
       "name": "PlantyMCPlantface",
-      "dateAdded": 1573731349,
+      "dateAdded": "2019-12-30 09:53:45",
       "temperatureTreshold": 89,
       "humidityTreshold": 95,
-      "ownerId": 1234,
-      "status": 1
+      "owner_id": 1234,
+      "status": "green"
     },
     "history":  {
       "active": true,

@@ -12,19 +12,19 @@ class HomeViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
 
-    @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
-
     private var homePage: HomePageResponse?
     private let refreshControl = UIRefreshControl()
     private var selectedPlantIndex = -1
+    private let plantImages = ["plant", "botanic_1", "botanic_2", "botanical", "bamboo", "monstera"]
+
+    private var expandedStates = [Bool]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Home"
         tableView.dataSource = self
         tableView.delegate = self
-        tableView.register(UINib(nibName: "PotOverviewTableViewCell", bundle: nil), forCellReuseIdentifier: "PotOverviewTableViewCell")
-        loadHomePage()
+        tableView.register(UINib(nibName: "PlantOverviewTableViewCell", bundle: nil), forCellReuseIdentifier: "PlantOverviewTableViewCell")
 
         tableView.refreshControl = refreshControl
         refreshControl.addTarget(self, action: #selector(refreshPlantData(_:)), for: .valueChanged)
@@ -34,17 +34,11 @@ class HomeViewController: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         navigationController?.navigationBar.prefersLargeTitles = true
+        loadHomePage()
     }
 
     @objc private func refreshPlantData(_ sender: Any) {
-        // Fetch Weather Data
-        self.activityIndicatorView.startAnimating()
         loadHomePage()
-        DispatchQueue.main.async {
-            self.tableView.reloadData()
-            self.refreshControl.endRefreshing()
-            self.activityIndicatorView.stopAnimating()
-        }
     }
 
     @IBAction func refreshButtonTapped(_ sender: Any) {
@@ -53,15 +47,12 @@ class HomeViewController: UIViewController {
 
     private func loadHomePage() {
         NetworkManager.shared().requestHomePage(success: { plants in
-            Toast.show(message: plants.plants?.first?.name ?? "BLA", controller: self)
             self.homePage = plants
             self.tableView.reloadData()
             self.refreshControl.endRefreshing()
-            self.activityIndicatorView.stopAnimating()
         }) { errorString in
-            Toast.show(message: errorString ?? "Error occurred", controller: self)
+            Toast.show(message: "There was an error while fetching the plant data. Please try again.", controller: self)
             self.refreshControl.endRefreshing()
-            self.activityIndicatorView.stopAnimating()
         }
     }
 
@@ -81,8 +72,8 @@ class HomeViewController: UIViewController {
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showDetail", let selectedPlant = homePage?.plants?[selectedPlantIndex] {
-            (segue.destination as? DetailViewController)?.model = DetailPageResponse(plant: selectedPlant,
-                                                                                     history: nil)
+            (segue.destination as? DetailViewController)?.model = DetailPageResponse(plant: selectedPlant)
+            (segue.destination as? DetailViewController)?.plantImage = plantImages[selectedPlantIndex % plantImages.count]
         }
     }
 }
@@ -105,12 +96,12 @@ extension HomeViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "PotOverviewTableViewCell", for: indexPath)
-        if let potCell = cell as? PotOverviewTableViewCell {
-            potCell.model = homePage?.plants?[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "PlantOverviewTableViewCell", for: indexPath)
+        if let potCell = cell as? PlantOverviewTableViewCell {
+            potCell.model = PlantOverviewTableViewCell.Model(plant: homePage?.plants?[indexPath.row],
+                                                             imageName: plantImages[indexPath.row % plantImages.count], expanded: false)
         }
         return cell
     }
-
 
 }

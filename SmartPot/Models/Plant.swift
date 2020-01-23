@@ -25,7 +25,8 @@ public struct Plant: Codable {
     public var status: PlantStatus?
     public var active: Int?
     public let temperature: Float?
-    public var humidity: Float?
+    public var humidityAir: Float?
+    public var humiditySoil: Float?
     public let profileImageId: String?
 
     private enum CodingKeys: String, CodingKey {
@@ -34,9 +35,13 @@ public struct Plant: Codable {
         case name
         case owner
         case status
-        case active, temperatureTreshold, humidityTreshold
+        case active
+        case temperatureTreshold = "temperature_treshold"
+        case humidityTreshold = "humidity_treshold"
         case ownerId = "owner_id"
-        case temperature, humidity
+        case temperature = "curr_temperature"
         case profileImageId = "profile_image_id"
+        case humidityAir = "curr_humidity_air"
+        case humiditySoil = "curr_humidity_soil"
     }
 }

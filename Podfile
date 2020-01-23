@@ -8,6 +8,7 @@ target 'SmartPot' do
   # Pods for SmartPot
 	pod 'Charts'
 	pod 'Segmentio'
-	pod 'Alamofire', '~> 5.0.0-rc.3'
-
+	pod 'Alamofire', '~> 4.8'
+	pod 'AlamofireImage', '~> 3.5'
+	pod 'Eureka'
 end

@@ -20,18 +20,13 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </tableView>
-                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="z28-1q-Qfg">
-                                <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
-                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="Gl9-SS-Udl" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" id="2xj-UR-N57"/>
                             <constraint firstItem="PQr-Ze-W5v" firstAttribute="bottom" secondItem="Gl9-SS-Udl" secondAttribute="bottom" id="JIR-R2-eZx"/>
                             <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" secondItem="Gl9-SS-Udl" secondAttribute="trailing" id="SXz-hX-QDc"/>
-                            <constraint firstItem="z28-1q-Qfg" firstAttribute="centerY" secondItem="tsR-hK-woN" secondAttribute="centerY" id="T5h-wq-4KG"/>
                             <constraint firstItem="Gl9-SS-Udl" firstAttribute="top" secondItem="PQr-Ze-W5v" secondAttribute="top" id="cWz-Gb-ffE"/>
-                            <constraint firstItem="z28-1q-Qfg" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="h6T-AV-HJ4"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
                     </view>
@@ -43,7 +38,6 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="activityIndicatorView" destination="z28-1q-Qfg" id="d1P-9v-gBA"/>
                         <outlet property="tableView" destination="Gl9-SS-Udl" id="uvO-AQ-8oc"/>
                         <segue destination="Ypw-Ty-eSK" kind="show" identifier="showDetail" id="itK-2U-Wbh"/>
                     </connections>
@@ -160,7 +154,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="iLH-e7-sby">
-                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="676"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </tableView>
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="LSe-S1-AOk">
@@ -178,7 +172,15 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="gGY-kM-W99"/>
                     </view>
-                    <navigationItem key="navigationItem" id="r13-Ih-RDG"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="r13-Ih-RDG">
+                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="f2y-oO-FQO">
+                            <connections>
+                                <segue destination="vcY-sz-EE7" kind="show" identifier="showEditForm" id="Evd-cd-4ZZ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="activityIndicatorView" destination="LSe-S1-AOk" id="YOy-AA-8lU"/>
                         <outlet property="tableView" destination="iLH-e7-sby" id="FKc-at-038"/>
@@ -187,6 +189,33 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bvH-cV-ygA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2513" y="-320"/>
+        </scene>
+        <!--Edit Plant Form View Controller-->
+        <scene sceneID="qsg-k1-Enn">
+            <objects>
+                <viewController id="vcY-sz-EE7" customClass="EditPlantFormViewController" customModule="SmartPot" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="J20-RS-Bc6">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="Byb-Fd-soP"/>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="pVP-PV-jsi">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="uFY-Vt-acI">
+                            <connections>
+                                <action selector="doneButtonTapped:" destination="vcY-sz-EE7" id="AD2-rA-rwW"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="doneBarButton" destination="uFY-Vt-acI" id="ODL-Is-Iv1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Gi-fD-8JX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3362" y="-320"/>
         </scene>
     </scenes>
     <resources>

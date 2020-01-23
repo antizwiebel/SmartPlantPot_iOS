@@ -9,6 +9,6 @@
 import Foundation
 
 public struct DetailPageResponse: Codable {
-    public let plant: Plant
-    public let history: HistoryObject?
+    public var plant: Plant
+    public var history: PlantHistory?
 }

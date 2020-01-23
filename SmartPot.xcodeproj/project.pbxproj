@@ -18,6 +18,7 @@
 		4D8BF62F2391344D008D9EE8 /* HistoryResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8BF62E2391344D008D9EE8 /* HistoryResponse.swift */; };
 		4D8BF631239138C9008D9EE8 /* ChartTimeFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8BF630239138C9008D9EE8 /* ChartTimeFormatter.swift */; };
 		4D90ED15238435AD008CAD78 /* UIColor+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D90ED14238435AD008CAD78 /* UIColor+Additions.swift */; };
+		4DA6F74823D4913D0035F503 /* EditPlantFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA6F74723D4913D0035F503 /* EditPlantFormViewController.swift */; };
 		4DCA5B6623AFAEC900B169A4 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCA5B6523AFAEC900B169A4 /* DetailViewController.swift */; };
 		4DCA5B6823AFAF9200B169A4 /* DetailPageResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCA5B6723AFAF9200B169A4 /* DetailPageResponse.swift */; };
 		4DF23374237C5FA900DE49D7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF23373237C5FA900DE49D7 /* AppDelegate.swift */; };
@@ -27,12 +28,11 @@
 		4DF2337D237C5FA900DE49D7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DF2337B237C5FA900DE49D7 /* Main.storyboard */; };
 		4DF2337F237C5FAB00DE49D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DF2337E237C5FAB00DE49D7 /* Assets.xcassets */; };
 		4DF23382237C5FAB00DE49D7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DF23380237C5FAB00DE49D7 /* LaunchScreen.storyboard */; };
-		4DF2338C237C602500DE49D7 /* PotOverviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF2338A237C602500DE49D7 /* PotOverviewTableViewCell.swift */; };
-		4DF2338D237C602500DE49D7 /* PotOverviewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4DF2338B237C602500DE49D7 /* PotOverviewTableViewCell.xib */; };
+		4DF2338C237C602500DE49D7 /* PlantOverviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF2338A237C602500DE49D7 /* PlantOverviewTableViewCell.swift */; };
+		4DF2338D237C602500DE49D7 /* PlantOverviewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4DF2338B237C602500DE49D7 /* PlantOverviewTableViewCell.xib */; };
 		4DF23390237C673F00DE49D7 /* Plant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF2338F237C673F00DE49D7 /* Plant.swift */; };
 		4DF23392237C6B1E00DE49D7 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF23391237C6B1E00DE49D7 /* User.swift */; };
-		4DF23394237C6B4B00DE49D7 /* Temperature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF23393237C6B4B00DE49D7 /* Temperature.swift */; };
-		4DF23396237C6C2D00DE49D7 /* Humidity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF23395237C6C2D00DE49D7 /* Humidity.swift */; };
+		4DF23394237C6B4B00DE49D7 /* Measurement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF23393237C6B4B00DE49D7 /* Measurement.swift */; };
 		C678D076E007363931C87F7C /* Pods_SmartPot.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11712CD1208434909502197F /* Pods_SmartPot.framework */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +51,7 @@
 		4D8BF62E2391344D008D9EE8 /* HistoryResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryResponse.swift; sourceTree = "<group>"; };
 		4D8BF630239138C9008D9EE8 /* ChartTimeFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartTimeFormatter.swift; sourceTree = "<group>"; };
 		4D90ED14238435AD008CAD78 /* UIColor+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Additions.swift"; sourceTree = "<group>"; };
+		4DA6F74723D4913D0035F503 /* EditPlantFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPlantFormViewController.swift; sourceTree = "<group>"; };
 		4DCA5B6523AFAEC900B169A4 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		4DCA5B6723AFAF9200B169A4 /* DetailPageResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPageResponse.swift; sourceTree = "<group>"; };
 		4DF23370237C5FA900DE49D7 /* SmartPot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartPot.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -62,12 +63,11 @@
 		4DF2337E237C5FAB00DE49D7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4DF23381237C5FAB00DE49D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4DF23383237C5FAB00DE49D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4DF2338A237C602500DE49D7 /* PotOverviewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PotOverviewTableViewCell.swift; sourceTree = "<group>"; };
-		4DF2338B237C602500DE49D7 /* PotOverviewTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PotOverviewTableViewCell.xib; sourceTree = "<group>"; };
+		4DF2338A237C602500DE49D7 /* PlantOverviewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantOverviewTableViewCell.swift; sourceTree = "<group>"; };
+		4DF2338B237C602500DE49D7 /* PlantOverviewTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlantOverviewTableViewCell.xib; sourceTree = "<group>"; };
 		4DF2338F237C673F00DE49D7 /* Plant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plant.swift; sourceTree = "<group>"; };
 		4DF23391237C6B1E00DE49D7 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		4DF23393237C6B4B00DE49D7 /* Temperature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Temperature.swift; sourceTree = "<group>"; };
-		4DF23395237C6C2D00DE49D7 /* Humidity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Humidity.swift; sourceTree = "<group>"; };
+		4DF23393237C6B4B00DE49D7 /* Measurement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Measurement.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +139,7 @@
 				4DF23375237C5FA900DE49D7 /* SceneDelegate.swift */,
 				4DF23377237C5FA900DE49D7 /* HomeViewController.swift */,
 				4DCA5B6523AFAEC900B169A4 /* DetailViewController.swift */,
+				4DA6F74723D4913D0035F503 /* EditPlantFormViewController.swift */,
 				4DF23379237C5FA900DE49D7 /* HistoryViewController.swift */,
 				4DF2337B237C5FA900DE49D7 /* Main.storyboard */,
 				4DF2337E237C5FAB00DE49D7 /* Assets.xcassets */,
@@ -152,8 +153,8 @@
 		4DF23389237C5FFF00DE49D7 /* TableViewCells */ = {
 			isa = PBXGroup;
 			children = (
-				4DF2338A237C602500DE49D7 /* PotOverviewTableViewCell.swift */,
-				4DF2338B237C602500DE49D7 /* PotOverviewTableViewCell.xib */,
+				4DF2338A237C602500DE49D7 /* PlantOverviewTableViewCell.swift */,
+				4DF2338B237C602500DE49D7 /* PlantOverviewTableViewCell.xib */,
 				4D8BF62823912162008D9EE8 /* ChartTableViewCell.swift */,
 				4D8BF62923912162008D9EE8 /* ChartTableViewCell.xib */,
 			);
@@ -165,8 +166,7 @@
 			children = (
 				4DF2338F237C673F00DE49D7 /* Plant.swift */,
 				4DF23391237C6B1E00DE49D7 /* User.swift */,
-				4DF23393237C6B4B00DE49D7 /* Temperature.swift */,
-				4DF23395237C6C2D00DE49D7 /* Humidity.swift */,
+				4DF23393237C6B4B00DE49D7 /* Measurement.swift */,
 				4D10355B237D76C4004AD267 /* HomePageResponse.swift */,
 				4D8BF62E2391344D008D9EE8 /* HistoryResponse.swift */,
 				4DCA5B6723AFAF9200B169A4 /* DetailPageResponse.swift */,
@@ -257,7 +257,7 @@
 				4D8BF62B23912162008D9EE8 /* ChartTableViewCell.xib in Resources */,
 				4D10355E237D771D004AD267 /* homepage_example_response.json in Resources */,
 				4D8BF62D239133E3008D9EE8 /* history_example_response.json in Resources */,
-				4DF2338D237C602500DE49D7 /* PotOverviewTableViewCell.xib in Resources */,
+				4DF2338D237C602500DE49D7 /* PlantOverviewTableViewCell.xib in Resources */,
 				4DF2337D237C5FA900DE49D7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -317,14 +317,14 @@
 				4DF23390237C673F00DE49D7 /* Plant.swift in Sources */,
 				4D10355C237D76C4004AD267 /* HomePageResponse.swift in Sources */,
 				4D8BF62F2391344D008D9EE8 /* HistoryResponse.swift in Sources */,
-				4DF23394237C6B4B00DE49D7 /* Temperature.swift in Sources */,
+				4DF23394237C6B4B00DE49D7 /* Measurement.swift in Sources */,
+				4DA6F74823D4913D0035F503 /* EditPlantFormViewController.swift in Sources */,
 				4D0AD47B23BFCC0300C8A8B6 /* Toast.swift in Sources */,
 				4DCA5B6623AFAEC900B169A4 /* DetailViewController.swift in Sources */,
 				4DF23378237C5FA900DE49D7 /* HomeViewController.swift in Sources */,
 				4D90ED15238435AD008CAD78 /* UIColor+Additions.swift in Sources */,
-				4DF2338C237C602500DE49D7 /* PotOverviewTableViewCell.swift in Sources */,
+				4DF2338C237C602500DE49D7 /* PlantOverviewTableViewCell.swift in Sources */,
 				4DF23374237C5FA900DE49D7 /* AppDelegate.swift in Sources */,
-				4DF23396237C6C2D00DE49D7 /* Humidity.swift in Sources */,
 				4DF23376237C5FA900DE49D7 /* SceneDelegate.swift in Sources */,
 				4DCA5B6823AFAF9200B169A4 /* DetailPageResponse.swift in Sources */,
 				4D8BF631239138C9008D9EE8 /* ChartTimeFormatter.swift in Sources */,
@@ -476,6 +476,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 44GSE3RUH5;
 				INFOPLIST_FILE = SmartPot/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -495,6 +496,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 44GSE3RUH5;
 				INFOPLIST_FILE = SmartPot/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

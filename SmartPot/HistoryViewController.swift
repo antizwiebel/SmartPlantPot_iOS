@@ -17,38 +17,35 @@ class HistoryViewController: UIViewController {
     @IBOutlet weak var segmentioView: Segmentio!
 
     private var historyPage: HistoryPageResponse?
-    private var selectedHistoryObject: HistoryObject?
+    private var selectedHistoryObject: PlantHistory?
 
     private let refreshControl = UIRefreshControl()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-//        self.navigationController?.navigationBar.prefersLargeTitles = true
         title = "History"
         tableView.dataSource = self
         tableView.register(UINib(nibName: "ChartTableViewCell", bundle: nil), forCellReuseIdentifier: "ChartTableViewCell")
-        historyPage = loadJson(filename: "history_example_response")
+        loadHistoryPage()
 
         var content = [SegmentioItem]()
 
         let tornadoItem = SegmentioItem(
             title: "Plant 1",
-            image: UIImage(named: "plants")
+            image: UIImage(named: "plant")
         )
         content.append(tornadoItem)
 
-
-
         let tornadoItem2 = SegmentioItem(
             title: "Plant 2",
-            image: UIImage(named: "plants")
+            image: UIImage(named: "botanic_1")
         )
         content.append(tornadoItem2)
 
         let tornadoItem3 = SegmentioItem(
             title: "Plant 3",
-            image: UIImage(named: "plants")
+            image: UIImage(named: "botanic_2")
         )
         content.append(tornadoItem3)
 
@@ -60,12 +57,12 @@ class HistoryViewController: UIViewController {
                     ),
                     selectedState: SegmentioState(
                         backgroundColor: .clear,
-                        titleFont: UIFont.systemFont(ofSize: UIFont.smallSystemFontSize),
+                        titleFont: UIFont.boldSystemFont(ofSize: UIFont.smallSystemFontSize),
                         titleTextColor: .black
                     ),
                     highlightedState: SegmentioState(
                         backgroundColor: UIColor.lightGray.withAlphaComponent(0.6),
-                        titleFont: UIFont.boldSystemFont(ofSize: UIFont.smallSystemFontSize),
+                        titleFont: UIFont.boldSystemFont(ofSize: UIFont.labelFontSize),
                         titleTextColor: .black
                     )
         ))
@@ -80,25 +77,21 @@ class HistoryViewController: UIViewController {
             self.selectedPlantDidChange(atIndex: segmentIndex)
         }
 
-        selectedHistoryObject = historyPage?.historyObjects.first
+
     }
 
-    func loadJson(filename fileName: String) -> HistoryPageResponse? {
-        if let url = Bundle.main.url(forResource: fileName, withExtension: "json") {
-            do {
-                let data = try Data(contentsOf: url)
-                let decoder = JSONDecoder()
-                let jsonData = try decoder.decode(HistoryPageResponse.self, from: data)
-                return jsonData
-            } catch {
-                print("error:\(error)")
-            }
+    func loadHistoryPage() {
+        NetworkManager.shared().requestHistoryPage(success: { plantHistory in
+            self.historyPage = plantHistory
+            self.selectedHistoryObject = plantHistory.plantHistory
+            self.tableView.reloadData()
+        }) { errorString in
+            Toast.show(message: "There was an error while fetching the plant history. Please try again.", controller: self)
         }
-        return nil
     }
 
     private func selectedPlantDidChange(atIndex index: Int) {
-        guard let selectedObject = historyPage?.historyObjects[index] else { return }
+        guard let selectedObject = historyPage?.plantHistory else { return }
         selectedHistoryObject = selectedObject
         tableView.reloadData()
     }
@@ -122,13 +115,13 @@ extension HistoryViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ChartTableViewCell", for: indexPath)
         if let potCell = cell as? ChartTableViewCell {
             if indexPath.row % 3 == 0 {
-                let model = ChartTableViewCell.Model(title: "Temperature", dataPoints: selectedHistoryObject?.temperatures, treshold: historyPage?.historyObjects[0].temperatureTreshold)
+                let model = ChartTableViewCell.Model(title: "Soil Humidity", measurements: selectedHistoryObject?.humiditySoil, treshold: nil)
                 potCell.model = model
             } else if indexPath.row % 3 == 1 {
-                let model = ChartTableViewCell.Model(title: "Humidity", dataPoints: selectedHistoryObject?.humidities, treshold: historyPage?.historyObjects[0].humidityTreshold)
+                let model = ChartTableViewCell.Model(title: "Air Humidity", measurements: selectedHistoryObject?.humidityAir, treshold: nil)
                 potCell.model = model
             } else  {
-                let model = ChartTableViewCell.Model(title: "Water", dataPoints: selectedHistoryObject?.water, treshold: nil)
+                let model = ChartTableViewCell.Model(title: "Temperature", measurements: selectedHistoryObject?.temperature, treshold: nil)
                 potCell.model = model
             }
         }

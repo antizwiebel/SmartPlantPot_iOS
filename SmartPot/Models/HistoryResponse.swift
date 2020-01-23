@@ -9,42 +9,23 @@
 import Foundation
 
 public struct HistoryPageResponse: Codable {
-    public let historyObjects: [HistoryObject]
-}
 
-public struct HistoryObject: Codable {
-    public var name: String?
-    public let id: Int
-    public let dateAdded: Int?
-    public var temperatureTreshold: Float?
-    public var humidityTreshold: Float?
-    public let ownerId: Int
-    public var active: Bool?
-    public let temperatures: [DataPoint]?
-    public let water: [DataPoint]?
-    public let humidities: [DataPoint]?
+    public let plantHistory: PlantHistory
 
     private enum CodingKeys: String, CodingKey {
-        case id
-        case dateAdded
-        case name
-        case active, temperatureTreshold, humidityTreshold
-        case ownerId
-        case water, temperatures, humidities
+        case plantHistory = "data"
     }
 }
 
-public struct DataPoint: Codable, Comparable {
-    public static func < (lhs: DataPoint, rhs: DataPoint) -> Bool {
-        lhs.date < rhs.date
-    }
+public struct PlantHistory: Codable {
 
-
-    public let value: Float
-    public let date: Int
+    public let temperature: [Measurement]?
+    public let humidityAir: [Measurement]?
+    public let humiditySoil: [Measurement]?
 
     private enum CodingKeys: String, CodingKey {
-        case value
-        case date
+        case temperature
+        case humidityAir = "humidity_air"
+        case humiditySoil = "humidity_soil"
     }
 }
