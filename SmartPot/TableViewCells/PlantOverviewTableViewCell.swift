@@ -35,7 +35,10 @@ class PlantOverviewTableViewCell: UITableViewCell {
     @IBOutlet weak var largeAirHumidityLabel: UILabel?
     @IBOutlet weak var arrowRightImageView: UIImageView?
 
-    
+    @IBOutlet weak var largeTemperatureImageView: UIImageView?
+    @IBOutlet weak var largeAirHumidityImageView: UIImageView?
+    @IBOutlet weak var largeSoilHumidityImageView: UIImageView?
+
     @IBOutlet weak var webcamImageView: UIImageView?
 
     struct Model {
@@ -75,12 +78,20 @@ class PlantOverviewTableViewCell: UITableViewCell {
             temperatureLabel?.text = String(describing: temp) + " °C"
             var largeLabelText = "Temperature: " + String(describing: temp) + " °C"
             if let treshold = model.temperatureTreshold {
+                largeLabelText.append(" Treshold: " + String(describing: treshold) + " °C")
+
                 if temp < treshold {
                     temperatureImageView?.tintColor = .systemRed
                     temperatureLabel?.textColor = .systemRed
+                    largeTemperatureLabel?.textColor = .systemRed
+                    largeTemperatureImageView?.tintColor = .systemRed
                     warnings += 1
+                } else {
+                    temperatureImageView?.tintColor = .black
+                    temperatureLabel?.textColor = .black
+                    largeTemperatureLabel?.textColor = .black
+                    largeTemperatureImageView?.tintColor = .black
                 }
-                largeLabelText.append(" Treshold: " + String(describing: treshold) + " °C")
             }
             largeTemperatureLabel?.text = largeLabelText
         }
@@ -89,15 +100,20 @@ class PlantOverviewTableViewCell: UITableViewCell {
             humidityLabel?.text = String(describing: hum) + " %"
             var largeLabelText = "Air Humidity: " + String(describing: hum) + " %"
             if let treshold = model.humidityTreshold {
+                largeLabelText.append(" Treshold: " + String(describing: treshold) + " %")
+
                 if hum < treshold {
                     humidityImageView?.tintColor = .systemRed
                     humidityLabel?.textColor = .systemRed
+                    largeAirHumidityLabel?.textColor = .systemRed
+                    largeAirHumidityImageView?.tintColor = .systemRed
                     warnings += 1
                 } else {
+                    largeAirHumidityImageView?.tintColor = .black
+                    largeAirHumidityLabel?.textColor = .black
                     humidityImageView?.tintColor = .black
                     humidityLabel?.textColor = .black
                 }
-                largeLabelText.append(" Treshold: " + String(describing: treshold) + " %")
             }
             largeAirHumidityLabel?.text = largeLabelText
         }
@@ -106,15 +122,20 @@ class PlantOverviewTableViewCell: UITableViewCell {
             humiditySoilLabel?.text = String(describing: hum) + " %"
             var largeLabelText = "Soil Humidity: " + String(describing: hum) + " %"
             if let treshold = model.humidityTreshold {
+                largeLabelText.append(" Treshold: " + String(describing: treshold) + " %")
+
                 if hum < treshold {
                     humiditySoilImageView?.tintColor = .systemRed
                     humiditySoilLabel?.textColor = .systemRed
+                    largeSoilHumidityLabel?.textColor = .systemRed
+                    largeSoilHumidityImageView?.tintColor = .systemRed
                     warnings += 1
                 } else {
+                    largeSoilHumidityImageView?.tintColor = .black
+                    largeSoilHumidityLabel?.textColor = .black
                     humiditySoilImageView?.tintColor = .black
                     humiditySoilLabel?.textColor = .black
                 }
-                largeLabelText.append(" Treshold: " + String(describing: treshold) + " %")
             }
             largeSoilHumidityLabel?.text = largeLabelText
         }
@@ -126,8 +147,8 @@ class PlantOverviewTableViewCell: UITableViewCell {
             statusLabel?.textColor = UIColor.white.withAlphaComponent(0.8)
         case 2,3:
             plantStatusImageView?.backgroundColor = .systemRed
-            statusLabel?.text = "needs attention!"
-            statusLabel?.textColor = .systemRed
+            statusLabel?.text = "in danger!"
+            statusLabel?.textColor = .white
         case 1:
             plantStatusImageView?.backgroundColor = .orange
             statusLabel?.text = "needs attention!"

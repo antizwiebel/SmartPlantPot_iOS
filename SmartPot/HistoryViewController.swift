@@ -118,10 +118,10 @@ extension HistoryViewController: UITableViewDataSource {
                 let model = ChartTableViewCell.Model(title: "Soil Humidity", measurements: selectedHistoryObject?.humiditySoil, treshold: nil)
                 potCell.model = model
             } else if indexPath.row % 3 == 1 {
-                let model = ChartTableViewCell.Model(title: "Air Humidity", measurements: selectedHistoryObject?.humidityAir, treshold: nil)
+                let model = ChartTableViewCell.Model(title: "Air Humidity", measurements: selectedHistoryObject?.humidityAir, treshold: nil, chartSize: 350.0)
                 potCell.model = model
             } else  {
-                let model = ChartTableViewCell.Model(title: "Temperature", measurements: selectedHistoryObject?.temperature, treshold: nil)
+                let model = ChartTableViewCell.Model(title: "Temperature", measurements: selectedHistoryObject?.temperature, treshold: nil, chartSize: 350.0)
                 potCell.model = model
             }
         }

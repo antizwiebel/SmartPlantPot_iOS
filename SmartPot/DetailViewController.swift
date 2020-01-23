@@ -114,14 +114,14 @@ extension DetailViewController: UITableViewDataSource {
         case 2:
             let cell = tableView.dequeueReusableCell(withIdentifier: "ChartTableViewCell", for: indexPath)
             if let potCell = cell as? ChartTableViewCell {
-                let cellModel = ChartTableViewCell.Model(title: "Air Humidity", measurements: model?.history?.humidityAir, treshold: model?.plant.humidityTreshold)
+                let cellModel = ChartTableViewCell.Model(title: "Air Humidity", measurements: model?.history?.humidityAir, treshold: model?.plant.humidityTreshold, chartSize: 350.0)
                 potCell.model = cellModel
             }
             return cell
         case 3:
             let cell = tableView.dequeueReusableCell(withIdentifier: "ChartTableViewCell", for: indexPath)
             if let potCell = cell as? ChartTableViewCell {
-                let cellModel = ChartTableViewCell.Model(title: "Temperature", measurements: model?.history?.temperature, treshold: model?.plant.temperatureTreshold)
+                let cellModel = ChartTableViewCell.Model(title: "Temperature", measurements: model?.history?.temperature, treshold: model?.plant.temperatureTreshold, chartSize: 350.0)
                 potCell.model = cellModel
             }
             return cell

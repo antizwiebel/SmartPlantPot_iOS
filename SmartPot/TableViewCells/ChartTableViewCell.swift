@@ -16,6 +16,7 @@ class ChartTableViewCell: UITableViewCell {
     @IBOutlet private weak var lineChartView: LineChartView?
 
     @IBOutlet private weak var titleLabel: UILabel?
+    @IBOutlet weak var chartSizeConstraint: NSLayoutConstraint?
 
     weak var axisFormatDelegate: IAxisValueFormatter?
 
@@ -23,6 +24,14 @@ class ChartTableViewCell: UITableViewCell {
         public let title: String
         public let measurements: [Measurement]?
         public let treshold: Float?
+        public var chartSize: CGFloat = 450.0
+
+        init(title: String, measurements: [Measurement]?, treshold: Float?, chartSize: CGFloat = 450.0) {
+            self.title = title
+            self.measurements = measurements
+            self.treshold = treshold
+            self.chartSize = chartSize
+        }
     }
 
     public var model: Model? {
@@ -35,6 +44,8 @@ class ChartTableViewCell: UITableViewCell {
 
         guard let historyObject = model, let dataPoints = historyObject.measurements?.reversed() else { return }
         titleLabel?.text = historyObject.title
+
+        chartSizeConstraint?.constant = historyObject.chartSize
 
         // Define the reference time interval
         var referenceTimeInterval: TimeInterval = 0
@@ -97,6 +108,8 @@ class ChartTableViewCell: UITableViewCell {
         lineChartView?.xAxis.labelRotationAngle = -90
         lineChartView?.data = data
         lineChartView?.chartDescription?.text = historyObject.title + "Values"
+
+        updateConstraintsIfNeeded()
     }
 
     override func awakeFromNib() {

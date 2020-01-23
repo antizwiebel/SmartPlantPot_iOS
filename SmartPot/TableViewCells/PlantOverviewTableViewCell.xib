@@ -216,9 +216,12 @@
                 <outlet property="humidityLabel" destination="I6k-18-8B5" id="fVK-4h-eus"/>
                 <outlet property="humiditySoilImageView" destination="iqv-Js-Kp9" id="dK0-op-Xgj"/>
                 <outlet property="humiditySoilLabel" destination="dHj-Ho-b8z" id="ER7-t7-JC7"/>
+                <outlet property="largeAirHumidityImageView" destination="CwE-8T-Hhx" id="Pep-Dl-I2U"/>
                 <outlet property="largeAirHumidityLabel" destination="ffE-iM-SvP" id="HUY-Kv-iBG"/>
+                <outlet property="largeSoilHumidityImageView" destination="1Bo-hI-j91" id="qlS-Pt-rjo"/>
                 <outlet property="largeSoilHumidityLabel" destination="deG-Pn-cXh" id="8e3-Wd-zmX"/>
                 <outlet property="largeStackView" destination="HuB-bx-4Cy" id="Vmo-4J-R4d"/>
+                <outlet property="largeTemperatureImageView" destination="Rag-SE-Eob" id="eLA-Jf-h49"/>
                 <outlet property="largeTemperatureLabel" destination="Mcy-ct-wt0" id="VMk-Oh-4CX"/>
                 <outlet property="plantImageView" destination="ORR-Za-zYw" id="cgv-qr-Gml"/>
                 <outlet property="plantStatusImageView" destination="qD2-xW-KmI" id="fvv-mP-yEn"/>
