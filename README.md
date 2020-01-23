@@ -39,4 +39,4 @@ required iOS >= 13.0
 
 ### Acknowledgements
 
-Icons made by Darius Dan Icons and Freepik from www.flaticon.com
+Icons made by Darius Dan and Freepik from www.flaticon.com
