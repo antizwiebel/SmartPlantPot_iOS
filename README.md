@@ -39,4 +39,4 @@ required iOS >= 13.0
 
 ### Acknowledgements
 
-Plant icons made by Darius Dan from www.flaticon.com
+Icons made by Darius Dan Icons and Freepik from www.flaticon.com
