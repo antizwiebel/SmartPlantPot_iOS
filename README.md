@@ -19,11 +19,11 @@ Currently this app uses our specific API endpoint at trabby.at. You need to chan
 
 In case you need further information about the API, we suggest heading over to the API documentation at https://app.swaggerhub.com/apis-docs/Smart-Plant-Pot/SmartPlantPot/1.0.0
 
-## Documentation
+### Documentation
 
 Check out the wiki page if you need more information or want to know more about our project: https://github.com/Snuu101/Smart-Plant-Pot.
 
-## Software Versions
+### Software Versions
 
 Xcode 11 / Swift 5 (master branch)
 
