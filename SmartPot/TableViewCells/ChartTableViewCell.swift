@@ -55,7 +55,7 @@ class ChartTableViewCell: UITableViewCell {
 
         // Define chart xValues formatter
         let formatter = DateFormatter()
-        formatter.dateFormat = "MM-dd HH:mm"
+        formatter.dateFormat = "dd.MM HH:mm"
 
         // check if time intervals are within a day
         if let min = dataPoints.min()?.date, let max = dataPoints.max()?.date,
@@ -83,7 +83,7 @@ class ChartTableViewCell: UITableViewCell {
 
         // create chart lines
         let line1 = LineChartDataSet(entries: entries, label: historyObject.title)
-        let line2 = LineChartDataSet(entries: tresholdEntries, label: "Treshold")
+        let line2 = LineChartDataSet(entries: tresholdEntries, label: "Lower Treshold")
 
         // style lines
         line1.colors = [.orange]
