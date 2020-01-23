@@ -9,7 +9,7 @@ Key features include:
 - history of all your plant data at the history tab or for a specific plant at its detail page
 - support and display of a webcam image of your plant
 
-## Important
+## !Important!
 
 Currently this app uses our specific API endpoint at trabby.at. You need to change this to your own API URLs. To do this, head to the class `Networkmanager.swift` and take a look at the `enum ApiEndpoints`:
 
