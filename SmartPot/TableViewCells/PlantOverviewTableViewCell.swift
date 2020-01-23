@@ -156,10 +156,7 @@ class PlantOverviewTableViewCell: UITableViewCell {
         }
 
         if expanded, let imageUrl = model.profileImageId, let url = URL(string: imageUrl) {
-
-            let placeholderImage = UIImage(named: plantImage)
-
-            webcamImageView?.af_setImage(withURL: url, placeholderImage: placeholderImage)
+            webcamImageView?.af_setImage(withURL: url, imageTransition: .crossDissolve(0.4))
             webcamImageView?.setupImageViewer(url: url)
             webcamImageHeightConstraint?.constant = 210
         } else {
