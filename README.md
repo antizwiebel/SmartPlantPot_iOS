@@ -4,9 +4,10 @@ This iOS app connects to the "SmartPot" backend and shows you all the informatio
 
 Some features include:
 
-- an overview of all your plants
-- an extensive and interactive graphical representation of all the plant data you gathered with your Raspberry Pi.
-
+- a homepage with an overview of all your plants
+- an extensive and interactive graphical representation of all the plant data you gathered with your Raspberry Pi
+- history of all your plant data at the history tab or for a specific plant at its detail page
+- support and display of a webcam image of your plant
 
 ## Important
 
