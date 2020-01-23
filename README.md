@@ -25,11 +25,11 @@ required iOS >= 13.0
 
 ### Libraries Used
 
-- 'Charts'
-- 'Segmentio'
-- 'Alamofire'
-- 'AlamofireImage'
-- 'Eureka'
+- [Charts](https://github.com/danielgindi/Charts)
+- [Segmentio](https://github.com/Yalantis/Segmentio)
+- [Alamofire](https://github.com/Alamofire/Alamofire)
+- [AlamofireImage](https://github.com/Alamofire/AlamofireImage)
+- [Eureka](https://github.com/xmartlabs/Eureka)
 
 ### Acknowledgements
 
