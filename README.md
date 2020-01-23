@@ -23,6 +23,14 @@ Xcode 11 / Swift 5 (master branch)
 
 required iOS >= 13.0 
 
+### Libraries Used
+
+- 'Charts'
+- 'Segmentio'
+- 'Alamofire'
+- 'AlamofireImage'
+- 'Eureka'
+
 ### Acknowledgements
 
 Plant icons made by Darius Dan from www.flaticon.com
