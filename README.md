@@ -36,6 +36,7 @@ required iOS >= 13.0
 - [Alamofire](https://github.com/Alamofire/Alamofire)
 - [AlamofireImage](https://github.com/Alamofire/AlamofireImage)
 - [Eureka](https://github.com/xmartlabs/Eureka)
+- [ImageViewer.swift](https://github.com/michaelhenry/ImageViewer.swift)
 
 ### Acknowledgements
 
