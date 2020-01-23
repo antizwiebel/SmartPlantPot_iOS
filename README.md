@@ -11,7 +11,7 @@ Key features include:
 
 ## Important
 
-Currently this app uses our specific API endpoint at trabby.at. If you want to change this, you should head to the class `Networkmanager.swift` and take a look at the `enum ApiEndpoints`:
+Currently this app uses our specific API endpoint at trabby.at. You need to change this to your own API URLS. To do this, head to the class `Networkmanager.swift` and take a look at the `enum ApiEndpoints`:
 
 - `homePage`: should be the URL to your API's plant/read php file
 - `plantUpdate`: should be the URL to your API's plant/update_from_app php file
