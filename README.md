@@ -8,8 +8,9 @@ Some features include:
 - an extensive and interactive graphical representation of all the plant data you gathered with your Raspberry Pi.
 
 
+## Important
 
-
+Currently this app uses our specific API endpoint at trabby.at. If you want to change this, you should head to the class `Networkmanager.swift` and take a look at the `enum ApiEndpoints`. 
 
 
 
