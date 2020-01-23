@@ -21,7 +21,7 @@ In case you need further information about the API, we suggest heading over to t
 
 ## Documentation
 
-Head over to the wiki page for more information: https://github.com/Snuu101/Smart-Plant-Pot.
+Check out the wiki page if you need more information or want to know more about our project: https://github.com/Snuu101/Smart-Plant-Pot.
 
 ## Software Versions
 
