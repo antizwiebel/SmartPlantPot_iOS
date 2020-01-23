@@ -14,4 +14,6 @@ Currently this app uses our specific API endpoint at trabby.at. If you want to c
 
 
 
+### Acknowledgements
+
 Plant icons made by Darius Dan from www.flaticon.com
