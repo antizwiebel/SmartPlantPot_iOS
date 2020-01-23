@@ -1,6 +1,6 @@
-# SmartPot iOS App
+# SmartPlantPot iOS App
 
-This iOS app connects to the "SmartPot" backend and shows you all the information you need about your plant. 
+This iOS app connects to the "SmartPlantPot" back end and shows you all the information you need about your plant. 
 
 Key features include:
 
