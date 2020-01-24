@@ -41,3 +41,7 @@ required iOS >= 13.0
 ### Acknowledgements
 
 Icons made by Darius Dan and Freepik from www.flaticon.com
+
+### License
+
+SmartPlantPot is licensed under the GNU General Public License v3.0
